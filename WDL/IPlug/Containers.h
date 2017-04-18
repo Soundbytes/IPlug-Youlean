@@ -21,30 +21,24 @@
 #include "../ptrlist.h"
 #include "../wdlendian.h"
 
-#define FREE_NULL(p) {free(p);p=0;}
-#define DELETE_NULL(p) {delete(p); p=0;}
-#define DELETE_ARRAY(p) {delete[](p); (p)=0;}
-#define IPMIN(x,y) ((x)<(y)?(x):(y))
-#define IPMAX(x,y) ((x)<(y)?(y):(x))
-#define BOUNDED(x,lo,hi) ((x) < (lo) ? (lo) : (x) > (hi) ? (hi) : (x))
-#define CSTR_NOT_EMPTY(cStr) ((cStr) && (cStr)[0] != '\0')
+template<typename P> inline void FREE_NULL(P* p) { free(p); p = 0; }
+template<typename P> inline void DELETE_NULL(P* p) { delete(p); p = 0; }
+template<typename P> inline void DELETE_ARRAY(P* p) { delete[](p); (p) = 0; }
+template<typename T> inline T IPMIN(T x, T y) { return x < y ? x : y; }
+template<typename T> inline T IPMAX(T x, T y) { return x < y ? y : x; }
+template<typename T> inline T BOUNDED(T x, T lo, T hi) { return x < lo ? lo : x > hi ? hi : x; }
+
+inline bool CSTR_NOT_EMPTY(const char* cStr) { return cStr != nullptr && cStr[0] != '\0'; }
 
 #define MAKE_QUOTE(str) #str
 #define MAKE_STR(str) MAKE_QUOTE(str)
 
-#define PI 3.141592653589793238
-#define AMP_DB 8.685889638065036553
-#define IAMP_DB 0.11512925464970
+const double PI = 3.141592653589793238;
+const double AMP_DB = 8.685889638065036553;
+const double IAMP_DB = 0.11512925464970;
 
-inline double DBToAmp(double dB)
-{
-  return exp(IAMP_DB * dB);
-}
-
-inline double AmpToDB(double amp)
-{
-  return AMP_DB * log(fabs(amp));
-}
+inline double DBToAmp(double dB) { return exp(IAMP_DB * dB); }
+inline double AmpToDB(double amp) { return AMP_DB * log(fabs(amp)); }
 
 #ifndef REMINDER
   #if defined WIN32
@@ -55,10 +49,7 @@ inline double AmpToDB(double amp)
   #endif
 #endif
 
-template <class T> inline void SWAP(T& a, T& b)
-{
-  T tmp = a; a = b; b = tmp;
-}
+template <class T> inline void SWAP(T& a, T& b) { T tmp = a; a = b; b = tmp; }
 
 typedef unsigned char BYTE;
 class ByteChunk

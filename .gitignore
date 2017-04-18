@@ -53,3 +53,11 @@ IPlugExamples/build_errors.log
 /IPlugExamples/duplicate.pyc
 WDL/lice/glew/include/GL/WGLEXT.H
 *.opendb
+*.tlog
+*.log
+*.obj
+*.pch
+*.idb
+*.pdb
+*.res
+*.ilk

@@ -1,0 +1,1777 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="_LICE_Template_Blit0&lt;COMBFUNC&gt;" Collapsed="true">
+    <Position X="47.25" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_Template_Blit1&lt;COMBFUNC&gt;" Collapsed="true">
+    <Position X="49.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_Template_Blit2&lt;COMBFUNC&gt;" Collapsed="true">
+    <Position X="51.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAA=</HashCode>
+      <FileName>lice.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_Template_Blit3&lt;COMBFUNC&gt;" Collapsed="true">
+    <Position X="38.25" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_Template_Blit4&lt;COMBFUNC&gt;" Collapsed="true">
+    <Position X="40.5" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LICE_TransformBlit_class&lt;T&gt;" Collapsed="true">
+    <Position X="49.5" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>lice.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LICE_TransformBlitAlpha_class&lt;T&gt;" Collapsed="true">
+    <Position X="51.75" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>lice.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlyphDrawImpl&lt;COMBFUNC&gt;" Collapsed="true">
+    <Position X="42.75" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CircleDrawer&lt;COMBFUNC&gt;" Collapsed="true">
+    <Position X="42.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAiAIAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_arc.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="__LICE_LineClassSimple&lt;COMBFUNC&gt;" Collapsed="true">
+    <Position X="40.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAgAAAAAIAAAAABACAAAABAAAA=</HashCode>
+      <FileName>lice_line.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="__LICE_LineClass&lt;COMBFUNC&gt;" Collapsed="true">
+    <Position X="38.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>lice_line.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_Fill&lt;COMBFUNC&gt;" Collapsed="true">
+    <Position X="42.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_line.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_FillFast&lt;COMBFUNC&gt;" Collapsed="true">
+    <Position X="45" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>lice_line.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LICE_PNGLoader" Collapsed="true">
+    <Position X="47.25" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAQAAAIAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>lice_png.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlyphRenderer&lt;T&gt;" Collapsed="true">
+    <Position X="45" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAoAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_textnew.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsClobberNoClamp" Collapsed="true">
+    <Position X="38.25" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsClobberClamp" Collapsed="true">
+    <Position X="49.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsClobberFAST" Collapsed="true">
+    <Position X="51.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsHalfMixNoClamp" Collapsed="true">
+    <Position X="49.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsHalfMixFAST" Collapsed="true">
+    <Position X="47.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsHalfMixClamp" Collapsed="true">
+    <Position X="45" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsHalfMix2FAST" Collapsed="true">
+    <Position X="42.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsQuarterMix2FAST" Collapsed="true">
+    <Position X="38.25" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsThreeQuarterMix2FAST" Collapsed="true">
+    <Position X="40.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsCopyNoClamp" Collapsed="true">
+    <Position X="47.25" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsCopyClamp" Collapsed="true">
+    <Position X="45" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsCopySourceAlphaNoClamp" Collapsed="true">
+    <Position X="40.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsCopySourceAlphaClamp" Collapsed="true">
+    <Position X="49.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsCopySourceAlphaIgnoreAlphaParmNoClamp" Collapsed="true">
+    <Position X="38.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsCopySourceAlphaIgnoreAlphaParmClamp" Collapsed="true">
+    <Position X="51.75" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsAdd" Collapsed="true">
+    <Position X="45" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsAddSourceAlpha" Collapsed="true">
+    <Position X="47.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsColorDodge" Collapsed="true">
+    <Position X="40.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsColorDodgeSourceAlpha" Collapsed="true">
+    <Position X="42.75" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsMulNoClamp" Collapsed="true">
+    <Position X="42.75" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsMulClamp" Collapsed="true">
+    <Position X="40.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsMulSourceAlphaNoClamp" Collapsed="true">
+    <Position X="47.25" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsMulSourceAlphaClamp" Collapsed="true">
+    <Position X="45" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsOverlay" Collapsed="true">
+    <Position X="49.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsOverlaySourceAlpha" Collapsed="true">
+    <Position X="51.75" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsHSVAdjust" Collapsed="true">
+    <Position X="51.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_LICE_CombinePixelsHSVAdjustSourceAlpha" Collapsed="true">
+    <Position X="38.25" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LICE_IFont" Collapsed="true">
+    <Position X="2" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAQBBAAABAAAAQABAgAAAAAAAgAAEAAAIA=</HashCode>
+      <FileName>lice_text.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LICE_CachedFont" Collapsed="true">
+    <Position X="2" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QABAAIAAIlAwBDAJABAAAAQChAgAggACAAIBAEAAAIU=</HashCode>
+      <FileName>lice_text.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LICE_IBitmap" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAgAAAEAAAAAQAgAAAAAABAAAAAAQQAAAQAAAAAAAAA=</HashCode>
+      <FileName>lice.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LICE_MemBitmap" Collapsed="true">
+    <Position X="2" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QgAAAAEAIKAAAAABAAAAAAAAAAAAQRCAAQAAAAgAAAA=</HashCode>
+      <FileName>lice.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LICE_SysBitmap" Collapsed="true">
+    <Position X="2" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QggAAAEAAAAACEIBgAAQAABAAAAAQQiAAQAAAAAAACA=</HashCode>
+      <FileName>lice.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LICE_WrapperBitmap" Collapsed="true">
+    <Position X="2" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAoEAAEAAAAAQAAAAAAAABAAQIAAQQAABQAAAAAAAAA=</HashCode>
+      <FileName>lice.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LICE_SubBitmap" Collapsed="true">
+    <Position X="2" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>wggAAAEAAAAAQAgAAAAAAAAAQAAAYQAAAQAAAAAAAAQ=</HashCode>
+      <FileName>lice.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="__unnamed_struct_0034_1" Collapsed="true">
+    <Position X="38.25" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAABEAAAAAAAAIAAAAAAAAAAAEkAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_003f_1" Collapsed="true">
+    <Position X="26.75" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAIAgAAAAEQAAAQAgiABAAAAAIAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngread.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_dsort_struct" Collapsed="true">
+    <Position X="7.75" Y="17.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAIAgAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngrtran.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0047_1" Collapsed="true">
+    <Position X="24.5" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAIAgAAAAEQAAAAAggABAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngwrite.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0049_1" Collapsed="true">
+    <Position X="24.5" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAJAAAAAAAAABAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngwutil.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_color_struct" Collapsed="true">
+    <Position X="20.25" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_color_16_struct" Collapsed="true">
+    <Position X="21.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAQAAAAAIAAAAAAAAAAAAAAAAAAAABAgA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_color_8_struct" Collapsed="true">
+    <Position X="13.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAQAAAAAIAAAAAAAAAAAAAAAAQAAAAAgA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_sPLT_entry_struct" Collapsed="true">
+    <Position X="5.25" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAIAAAAAAAAAAACAAAAQAAAAAgA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_sPLT_struct" Collapsed="true">
+    <Position X="17.5" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAgAAAAAAAEAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_text_struct" Collapsed="true">
+    <Position X="6" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAIAAAAEAAAAAgAAAAAIAAAAAAQAACA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_time_struct" Collapsed="true">
+    <Position X="1.75" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAkAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAiAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_unknown_chunk_t" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAACAAAEAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_row_info_struct" Collapsed="true">
+    <Position X="13" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAQAAAAAAQAAAAAAAAAAAAAAAAAAQIAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0035_1" Collapsed="true">
+    <Position X="10.25" Y="17.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAABAAAAQAQAAACAAAAAAAAAAAAAAAAAAAgCQ=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_info_def" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAxI5IgAWAKsAUM4AAAIAAAIA4AAAAJgAITMBAQIMQ=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pnginfo.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_control" Collapsed="true">
+    <Position X="22.25" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAIACAAAAACAIAAAAAAAAAAAAAAAAAAAAIAAIA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngpriv.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_compression_buffer" Collapsed="true">
+    <Position X="20" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngstruct.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_xy" Collapsed="true">
+    <Position X="45" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAGAAAABAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngstruct.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_XYZ" Collapsed="true">
+    <Position X="47.25" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAABAAAAAAAABAAcAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngstruct.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_colorspace" Collapsed="true">
+    <Position X="26" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABEAAAAABAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngstruct.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="png_struct_def" Collapsed="true">
+    <Position X="1.75" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>/XltUor1vSNTKAWn9I40PjoaMBYGWpIhgJz1JSBQoGY=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngstruct.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="config_s" Collapsed="true">
+    <Position X="10" Y="21" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAEAAEAAAAAAAAAABAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\deflate.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="static_tree_desc_s" Collapsed="true">
+    <Position X="33.5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\deflate.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="internal_state" Collapsed="true">
+    <Position X="31.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>sARSFAwRuqDSBCAAAgAIIRQAIYGEoIBoASBCIAEBBCg=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\deflate.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ptr_table_s" Collapsed="true">
+    <Position X="31.25" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zutil.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ct_data_s" Collapsed="true">
+    <Position X="12.25" Y="21" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\deflate.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tree_desc_s" Collapsed="true">
+    <Position X="33.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAhAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\deflate.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_005d_1" Collapsed="true">
+    <Position X="14.5" Y="21" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAIEAAAAAIACCgAIAGgAAACQEAAAAEAARQAAABAgA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\gzguts.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="inflate_state" Collapsed="true">
+    <Position X="42.75" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAEMIpACMAAGQAUASgAAAAABAAAAOAEAAYCIAQgQ=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\inflate.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0068_1" Collapsed="true">
+    <Position X="5.5" Y="21" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAEAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\inftrees.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="z_stream_s" Collapsed="true">
+    <Position X="31.25" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQAAAEAAAIAAAACQAAAIICAAEEAAQAAAEAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zlib.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="gz_header_s" Collapsed="true">
+    <Position X="5.25" Y="17.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQBACAAQAAEAAAABAABAAAAAAAEAAAIAAkQAAAAAQA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zlib.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="gzFile_s" Collapsed="true">
+    <Position X="29" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAIAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zlib.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ONode" Collapsed="true">
+    <Position X="40.5" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAQAAAAAAAAgAAAAAAAAAAAAAAICAAA=</HashCode>
+      <FileName>lice_palette.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="OTree" Collapsed="true">
+    <Position X="42.75" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAEAAAAACAIAgAAAAAAAACAAAAAAAAAACAAAA=</HashCode>
+      <FileName>lice_palette.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0052_1" Collapsed="true">
+    <Position X="31.25" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>lice_png.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LICE_Ext_Line_acceldata" Collapsed="true">
+    <Position X="45" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAACAAAAAAIAAAwAAAACAAQAQAAAAAAA=</HashCode>
+      <FileName>lice_extended.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LICE_Ext_FillRect_acceldata" Collapsed="true">
+    <Position X="40.5" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAACAAAAAACAQAhwAAAAAAA=</HashCode>
+      <FileName>lice_extended.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LICE_Ext_DrawCBezier_acceldata" Collapsed="true">
+    <Position X="49.5" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEhAYAAEgAQAACACAAAAAAAAAgAAACAAAAQAAAAAAA=</HashCode>
+      <FileName>lice_extended.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LICE_Ext_DrawGlyph_acceldata" Collapsed="true">
+    <Position X="51.75" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAECAAAAAAAAAAAAAAACAAABwAAAAAAA=</HashCode>
+      <FileName>lice_extended.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LICE_Ext_Blit_acceldata" Collapsed="true">
+    <Position X="45" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAhAABiASAAAAAAY=</HashCode>
+      <FileName>lice_extended.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LICE_Ext_ScaledBlit_acceldata" Collapsed="true">
+    <Position X="49.5" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAACAAAQAAAAAAAAAAhAABgASAAAAABY=</HashCode>
+      <FileName>lice_extended.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LICE_Ext_DashedLine_acceldata" Collapsed="true">
+    <Position X="47.25" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAEACAAAAAAAAAAwAAAACEAQAQAAACAAA=</HashCode>
+      <FileName>lice_extended.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LICE_Ext_GetPixel_acceldata" Collapsed="true">
+    <Position X="42.75" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>lice_extended.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LICE_Ext_PutPixel_acceldata" Collapsed="true">
+    <Position X="47.25" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAGAAABwAAAAAAA=</HashCode>
+      <FileName>lice_extended.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LICE_Ext_SetClip_data" Collapsed="true">
+    <Position X="51.75" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQAhgAAAAAAA=</HashCode>
+      <FileName>lice_extended.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LICE_Ext_DrawTriangle_acceldata" Collapsed="true">
+    <Position X="38.25" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAWAA=</HashCode>
+      <FileName>lice_extended.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LICE_Ext_WindowBlit_data" Collapsed="true">
+    <Position X="38.25" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAEAAAAAAAAAAAAAARggEAAgAAAA=</HashCode>
+      <FileName>lice_extended.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="_LICE_ImageLoader_rec" Collapsed="true">
+    <Position X="40.5" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>lice.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="Your_png_h_is_not_version_1_6_19" Collapsed="true">
+    <Position X="17.75" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_image_read_control" Collapsed="true">
+    <Position X="26.75" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngread.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_dsort" Collapsed="true">
+    <Position X="7.75" Y="18.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngrtran.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_dsortp" Collapsed="true">
+    <Position X="9" Y="19.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngrtran.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_dsortpp" Collapsed="true">
+    <Position X="9" Y="19" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngrtran.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_image_write_control" Collapsed="true">
+    <Position X="24.5" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngwrite.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="compression_state" Collapsed="true">
+    <Position X="24.5" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngwutil.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_libpng_version_1_6_19" Collapsed="true">
+    <Position X="17.75" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_struct" Collapsed="true">
+    <Position X="1.75" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_structp" Collapsed="true">
+    <Position X="3" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_structp" Collapsed="true">
+    <Position X="3" Y="8" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_structpp" Collapsed="true">
+    <Position X="3" Y="10.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_info" Collapsed="true">
+    <Position X="4.75" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_infop" Collapsed="true">
+    <Position X="6" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_infop" Collapsed="true">
+    <Position X="6" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_infopp" Collapsed="true">
+    <Position X="6" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_structrp" Collapsed="true">
+    <Position X="3" Y="11" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_structrp" Collapsed="true">
+    <Position X="3" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_inforp" Collapsed="true">
+    <Position X="6" Y="4.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_inforp" Collapsed="true">
+    <Position X="5.5" Y="5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+    <AliasOfLine Type="png_info" ManuallyRouted="true">
+      <Path>
+        <Point X="5.75" Y="1.812" />
+        <Point X="5.75" Y="4.8" />
+        <Point X="5.2" Y="4.8" />
+        <Point X="5.2" Y="5.281" />
+        <Point X="5.5" Y="5.281" />
+      </Path>
+    </AliasOfLine>
+  </Typedef>
+  <Typedef Name="png_color" Collapsed="true">
+    <Position X="20.25" Y="13.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_colorp" Collapsed="true">
+    <Position X="21.5" Y="15.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_colorp" Collapsed="true">
+    <Position X="21.5" Y="14" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_colorpp" Collapsed="true">
+    <Position X="21.5" Y="14.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_color_16" Collapsed="true">
+    <Position X="21.25" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_color_16p" Collapsed="true">
+    <Position X="22.5" Y="2.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_color_16p" Collapsed="true">
+    <Position X="22.5" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_color_16pp" Collapsed="true">
+    <Position X="22.5" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_color_8" Collapsed="true">
+    <Position X="13.25" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_color_8p" Collapsed="true">
+    <Position X="14.75" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_color_8p" Collapsed="true">
+    <Position X="14.75" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_color_8pp" Collapsed="true">
+    <Position X="14.75" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_sPLT_entry" Collapsed="true">
+    <Position X="5.25" Y="13.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_sPLT_entryp" Collapsed="true">
+    <Position X="6.5" Y="15.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_sPLT_entryp" Collapsed="true">
+    <Position X="6.5" Y="14" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_sPLT_entrypp" Collapsed="true">
+    <Position X="6.5" Y="14.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_sPLT_t" Collapsed="true">
+    <Position X="17.5" Y="13.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_sPLT_tp" Collapsed="true">
+    <Position X="18.75" Y="14.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_sPLT_tp" Collapsed="true">
+    <Position X="18.75" Y="14" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_sPLT_tpp" Collapsed="true">
+    <Position X="18.75" Y="15.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_text" Collapsed="true">
+    <Position X="6" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_textp" Collapsed="true">
+    <Position X="7.25" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_textp" Collapsed="true">
+    <Position X="7.25" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_textpp" Collapsed="true">
+    <Position X="7.25" Y="8" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_time" Collapsed="true">
+    <Position X="1.75" Y="13.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_timep" Collapsed="true">
+    <Position X="3" Y="14.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_timep" Collapsed="true">
+    <Position X="3" Y="14" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_timepp" Collapsed="true">
+    <Position X="3" Y="15.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_unknown_chunk" Collapsed="true">
+    <Position X="16.25" Y="1.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_unknown_chunkp" Collapsed="true">
+    <Position X="18.25" Y="3.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_unknown_chunkp" Collapsed="true">
+    <Position X="18.25" Y="2" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_unknown_chunkpp" Collapsed="true">
+    <Position X="18.25" Y="2.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_row_info" Collapsed="true">
+    <Position X="13" Y="13.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_row_infop" Collapsed="true">
+    <Position X="14.25" Y="14.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_row_infopp" Collapsed="true">
+    <Position X="14.25" Y="14" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PNG_CALLBACK" Collapsed="true">
+    <Position X="51.75" Y="11" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_controlp" Collapsed="true">
+    <Position X="22.25" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_image" Collapsed="true">
+    <Position X="11.5" Y="18.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_imagep" Collapsed="true">
+    <Position X="11.5" Y="19" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\png.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_byte" Collapsed="true">
+    <Position X="0.5" Y="17.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_int_16" Collapsed="true">
+    <Position X="8.75" Y="13.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_uint_16" Collapsed="true">
+    <Position X="23" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_int_32" Collapsed="true">
+    <Position X="9.5" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_uint_32" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_size_t" Collapsed="true">
+    <Position X="13" Y="17.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_ptrdiff_t" Collapsed="true">
+    <Position X="20" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_alloc_size_t" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_fixed_point" Collapsed="true">
+    <Position X="10.75" Y="8" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_voidp" Collapsed="true">
+    <Position X="47.25" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_voidp" Collapsed="true">
+    <Position X="51.75" Y="11.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_bytep" Collapsed="true">
+    <Position X="1.75" Y="19" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_bytep" Collapsed="true">
+    <Position X="1.75" Y="18.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_uint_32p" Collapsed="true">
+    <Position X="9.75" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_uint_32p" Collapsed="true">
+    <Position X="9.75" Y="1.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_int_32p" Collapsed="true">
+    <Position X="10.75" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_int_32p" Collapsed="true">
+    <Position X="10.75" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_uint_16p" Collapsed="true">
+    <Position X="24.25" Y="14.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_uint_16p" Collapsed="true">
+    <Position X="24.25" Y="13.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_int_16p" Collapsed="true">
+    <Position X="10.25" Y="14.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_int_16p" Collapsed="true">
+    <Position X="10.25" Y="14" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_charp" Collapsed="true">
+    <Position X="38.25" Y="11.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_charp" Collapsed="true">
+    <Position X="45" Y="11.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_fixed_point_p" Collapsed="true">
+    <Position X="12" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_fixed_point_p" Collapsed="true">
+    <Position X="12" Y="10.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_size_tp" Collapsed="true">
+    <Position X="14.25" Y="19" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_size_tp" Collapsed="true">
+    <Position X="14.25" Y="18.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_FILE_p" Collapsed="true">
+    <Position X="45" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_doublep" Collapsed="true">
+    <Position X="40.5" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_doublep" Collapsed="true">
+    <Position X="49.5" Y="11.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_bytepp" Collapsed="true">
+    <Position X="1.75" Y="19.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_uint_32pp" Collapsed="true">
+    <Position X="9.75" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_int_32pp" Collapsed="true">
+    <Position X="10.75" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_uint_16pp" Collapsed="true">
+    <Position X="24.25" Y="14" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_int_16pp" Collapsed="true">
+    <Position X="10.25" Y="15.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_charpp" Collapsed="true">
+    <Position X="47.25" Y="11.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_charpp" Collapsed="true">
+    <Position X="40.5" Y="11.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_fixed_point_pp" Collapsed="true">
+    <Position X="12" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_doublepp" Collapsed="true">
+    <Position X="42.75" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_charppp" Collapsed="true">
+    <Position X="42.75" Y="11.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_double" Collapsed="true">
+    <Position X="38.25" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngpriv.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_uint_16pp" Collapsed="true">
+    <Position X="24.25" Y="15.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngpriv.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_warning_parameters" Collapsed="true">
+    <Position X="49.5" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngpriv.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_compression_bufferp" Collapsed="true">
+    <Position X="20" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngstruct.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_colorspacerp" Collapsed="true">
+    <Position X="27.5" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngstruct.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="png_const_colorspacerp" Collapsed="true">
+    <Position X="27.5" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\libpng\pngstruct.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="block_state" Collapsed="true">
+    <Position X="33.5" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\deflate.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="config" Collapsed="true">
+    <Position X="10" Y="21.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\deflate.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ptr_table" Collapsed="true">
+    <Position X="31.25" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zutil.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ct_data" Collapsed="true">
+    <Position X="12.25" Y="21.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\deflate.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="static_tree_desc" Collapsed="true">
+    <Position X="33.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\deflate.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="tree_desc" Collapsed="true">
+    <Position X="33.5" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\deflate.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="Pos" Collapsed="true">
+    <Position X="26" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\deflate.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="Posf" Collapsed="true">
+    <Position X="28.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\deflate.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="IPos" Collapsed="true">
+    <Position X="42.75" Y="11" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\deflate.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="deflate_state" Collapsed="true">
+    <Position X="31.25" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\deflate.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="gz_state" Collapsed="true">
+    <Position X="14.5" Y="21.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\gzguts.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="gz_statep" Collapsed="true">
+    <Position X="14.5" Y="22.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\gzguts.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="inflate_mode" Collapsed="true">
+    <Position X="7.75" Y="21.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\inflate.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="code" Collapsed="true">
+    <Position X="5.5" Y="21.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\inftrees.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="codetype" Collapsed="true">
+    <Position X="26.75" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\inftrees.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="Byte" Collapsed="true">
+    <Position X="31.25" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uInt" Collapsed="true">
+    <Position X="33.5" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uLong" Collapsed="true">
+    <Position X="22.25" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="Bytef" Collapsed="true">
+    <Position X="31.25" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="charf" Collapsed="true">
+    <Position X="38.25" Y="11" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="intf" Collapsed="true">
+    <Position X="40.5" Y="11" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uIntf" Collapsed="true">
+    <Position X="33.5" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uLongf" Collapsed="true">
+    <Position X="22.25" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="voidpc" Collapsed="true">
+    <Position X="40.5" Y="13.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="voidpf" Collapsed="true">
+    <Position X="42.75" Y="13.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="voidp" Collapsed="true">
+    <Position X="38.25" Y="13.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="z_crc_t" Collapsed="true">
+    <Position X="45" Y="13.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zconf.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="z_stream" Collapsed="true">
+    <Position X="31.25" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zlib.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="z_streamp" Collapsed="true">
+    <Position X="31.25" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zlib.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="gz_header" Collapsed="true">
+    <Position X="5.25" Y="18.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zlib.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="gz_headerp" Collapsed="true">
+    <Position X="5.25" Y="19" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zlib.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="gzFile" Collapsed="true">
+    <Position X="29" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zlib.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ptrdiff_t" Collapsed="true">
+    <Position X="20" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zutil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uch" Collapsed="true">
+    <Position X="29" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zutil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uchf" Collapsed="true">
+    <Position X="29" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zutil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ush" Collapsed="true">
+    <Position X="24.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zutil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ushf" Collapsed="true">
+    <Position X="26" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zutil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ulg" Collapsed="true">
+    <Position X="51.75" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\zutil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="pngReadStruct" Collapsed="true">
+    <Position X="31.25" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_png.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LICE_COMBINEFUNC" Collapsed="true">
+    <Position X="45" Y="11" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice_combine.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LICE_pixel" Collapsed="true">
+    <Position X="47.25" Y="11" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LICE_pixel_chan" Collapsed="true">
+    <Position X="49.5" Y="11" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>lice.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="__unnamed_enum_005a_1" Collapsed="true">
+    <Position X="33.5" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAABAAAAAAAAAAAAAAIAACAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\deflate.c</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0066_1" Collapsed="true">
+    <Position X="7.75" Y="21" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAFEECACQgABAwYAABAQQECAQcAAAEAAAEAAAQAAAEs=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\inflate.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0068_2" Collapsed="true">
+    <Position X="26.75" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\zlib\inftrees.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0050_1" Collapsed="true">
+    <Position X="42.75" Y="10" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAACAIAAA=</HashCode>
+      <FileName>lice_line.cpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_004f_1" Collapsed="true">
+    <Position X="40.5" Y="10" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAEAABABEAAAgAAAAAEQAAAQBQgQCAAAAEAEAAA=</HashCode>
+      <FileName>lice_extended.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_004b_2" Collapsed="true">
+    <Position X="38.25" Y="10" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAA=</HashCode>
+      <FileName>lice.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

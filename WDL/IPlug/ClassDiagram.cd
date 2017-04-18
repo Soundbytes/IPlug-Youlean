@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BitmapStorage" Collapsed="true">
+    <Position X="1.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAEAACAAABAAAAAAIAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>IGraphics.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUIResizeBitmapStorage" Collapsed="true">
+    <Position X="6.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAEDAAAAAgAAAAACACAAAAAAAAAAIBAA=</HashCode>
+      <FileName>IGraphics.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FontStorage" Collapsed="true">
+    <Position X="4.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAJAAA=</HashCode>
+      <FileName>IGraphics.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ycairo_background" Collapsed="true">
+    <Position X="3.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAgAAACACgAAIAAAAyAAAAQAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\YCAIRO\ycairo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ycairo_base" Collapsed="true">
+    <Position X="1.25" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQIQAAypABAAABEhAAYoAAAAIAYAAAAABgAAAAAgIgA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\YCAIRO\ycairo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ycairo_gui" Collapsed="true">
+    <Position X="3" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQACAQgAgACEAAAAIQAggAgAAIAgASAABAAYAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\YCAIRO\ycairo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ycairo_text" Collapsed="true">
+    <Position X="4.75" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KBogEIAABAAEAAAACAAgABAUABAIAFAABEBACAAEBAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\YCAIRO\ycairo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IBitmapTextControl" Collapsed="true">
+    <Position X="1.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAACQAAAAwAAAAAAAAAAAAAIAAARAAEAAABAAgA=</HashCode>
+      <FileName>IBitmapMonoText.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IControl" Collapsed="true">
+    <Position X="1.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIFjNABBIAAEnxCK+YAwKHIXMAJEgywMoDLDACgWEHA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IPanelControl" Collapsed="true">
+    <Position X="1.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAEAAAAAAAAAgA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IBitmapControl" Collapsed="true">
+    <Position X="3.75" Y="7.5" Width="1.5" />
+    <InheritanceLine Type="IControl" ManuallyRouted="true">
+      <Path>
+        <Point X="2" Y="1.812" />
+        <Point X="2" Y="2.381" />
+        <Point X="4.5" Y="2.381" />
+        <Point X="4.5" Y="7.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAACAAAAAEAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISwitchControl" Collapsed="true">
+    <Position X="3.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAQAoAAAAAAAAAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISwitchPopUpControl" Collapsed="true">
+    <Position X="4.75" Y="10.75" Width="1.5" />
+    <InheritanceLine Type="ISwitchControl" ManuallyRouted="true">
+      <Path>
+        <Point X="4.5" Y="9.191" />
+        <Point X="4.5" Y="10.536" />
+        <Point X="5.5" Y="10.536" />
+        <Point X="5.5" Y="10.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAEAAAAAAAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISwitchFramesControl" Collapsed="true">
+    <Position X="4.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAIAAAAQAAAAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IInvisibleSwitchControl" Collapsed="true">
+    <Position X="1.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAgAAAAAAAAAAAgAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IRadioButtonsControl" Collapsed="true">
+    <Position X="1.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAIAAgABAQAAAgAAAAAEAAAAIgAABAAABAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IContactControl" Collapsed="true">
+    <Position X="4.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAIA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IFaderControl" Collapsed="true">
+    <Position X="1.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgIChAAACQQBAgCABCAAAAAAAAEEAAQAIgACgAAAAAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IKnobControl" Collapsed="true">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAACAEAAAAAAAAABAAAQAAgAAAAIAAAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IKnobLineControl" Collapsed="true">
+    <Position X="5.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAHAAAABAQAAgAAAAAQAAAAAAAAAAAAAEAAAEAAAgA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IKnobRotaterControl" Collapsed="true">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAIAgAAAAAAAAAAAAAEAAAAAIAAAFAAAAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IKnobMultiControl" Collapsed="true">
+    <Position X="5.75" Y="6" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAACAAAAACEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IKnobRotatingMaskControl" Collapsed="true">
+    <Position X="5.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAACAAAAgCIAAAAAAAAQAIAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IBitmapOverlayControl" Collapsed="true">
+    <Position X="4.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAIAAAAAAAgAAAAAAAJAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITextControl" Collapsed="true">
+    <Position X="1.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAAAAAAAgAAAAAAAAAAIAAAAAAQAAEAIAAABAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICaptionControl" Collapsed="true">
+    <Position X="3.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAACAAAAoEAAAAAIAAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IURLControl" Collapsed="true">
+    <Position X="1.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgQAEAAAAgAAAAAAAAAAAAAAEQAAIAAAAAAAAAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IFileSelectorControl" Collapsed="true">
+    <Position X="1.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAgBAAAACAAIQABAEQQAAIAABAAIAAAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IGraphics" Collapsed="true">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>d5JQM4k8RYwrn0GgQJj3LGrRUGJgGrwQ6MaHYc3zqBY=</HashCode>
+      <FileName>IGraphics.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IGraphicsWin" Collapsed="true">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>NOAAEIcgJARBAEgAAAgiLDCIJQAgAAgAAIACcY2hTCA=</HashCode>
+      <FileName>IGraphicsWin.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IParam" Collapsed="true">
+    <Position X="1.25" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>NpQADATIIAsABQEwEAIBCBAAAFAcoIAklajhEBQEgCo=</HashCode>
+      <FileName>IParam.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IPlugBase" Collapsed="true">
+    <Position X="3" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>LQyNTgpT7QbA78S4wBHBmmBoRa+qu8FdIqg3uYobD+M=</HashCode>
+      <FileName>IPlugBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IPlugGUILiveEdit" Collapsed="true">
+    <Position X="1.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAJAABECIDgDCgJCYgEAUQgUQgAMIAZGYkIBiAE2AAI=</HashCode>
+      <FileName>IPlugGUILiveEdit.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IPlugGUIResize" Collapsed="true">
+    <Position X="1.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HBAonSJCnTEbPkAWqldw4BEZaRGsMEaWo/OhCppbIK0=</HashCode>
+      <FileName>IPlugGUIResize.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HorisontalResizing" Collapsed="true">
+    <Position X="1.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAACgAAAAAAAAAIAAAAAAQAIAAAAAASAAA=</HashCode>
+      <FileName>IPlugGUIResize.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VerticalResizing" Collapsed="true">
+    <Position X="1.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACgACAAAAAAAAAAAACAQAIAAAAAASAAA=</HashCode>
+      <FileName>IPlugGUIResize.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IPopupMenuItem" Collapsed="true">
+    <Position X="6.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAEIABABAAIAIgAAAACAAAAAAAgCgAAIAAAAAI=</HashCode>
+      <FileName>IPopupMenu.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IPopupMenu" Collapsed="true">
+    <Position X="4.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KAQQAogAiAAAAEBAABAAAAAAoAADAAUABAQAAAAAAEA=</HashCode>
+      <FileName>IPopupMenu.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ByteChunk" Collapsed="true">
+    <Position X="3" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABCAAAIAkAAAgKBEAQAAAMAIAAAQAAAAAARAAAFAAAg=</HashCode>
+      <FileName>Containers.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="LogFile" Collapsed="true">
+    <Position X="1.25" Y="20.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAACAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Log.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DRECT" Collapsed="true">
+    <Position X="1.25" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEUMAwA=</HashCode>
+      <FileName>IPlugGUIResize.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="viewContainer" Collapsed="true">
+    <Position X="4.75" Y="20.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAgAAAAAAAAAAAAAAACAAAABAIAEAAEAAAAA=</HashCode>
+      <FileName>IPlugGUIResize.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="layoutContainer" Collapsed="true">
+    <Position X="6.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAMAAAAAAAAAAAAABAABAAAAAAAAAAAQ=</HashCode>
+      <FileName>IPlugGUIResize.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="IBitmap" Collapsed="true">
+    <Position X="3" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAEAAAIAAQAAAAAAAAFAIAAA=</HashCode>
+      <FileName>IPlugStructs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="IColor" Collapsed="true">
+    <Position X="6.5" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAABAAEBAAAAIAAAgAIIAQAQgAAAACAAAACAKAEAAQA=</HashCode>
+      <FileName>IPlugStructs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="IChannelBlend" Collapsed="true">
+    <Position X="4.75" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAABAAAACAAAAA=</HashCode>
+      <FileName>IPlugStructs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="IText" Collapsed="true">
+    <Position X="3" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAQAAAAAAAAAAgAgAAACAACgAAAAAAACgAkA=</HashCode>
+      <FileName>IPlugStructs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="IRECT" Collapsed="true">
+    <Position X="6.5" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAABAAAEAAAAAgAIEAQAEAEAAAAAEAAAAQUVcAYA=</HashCode>
+      <FileName>IPlugStructs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="IMouseMod" Collapsed="true">
+    <Position X="3" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAoASAAQA=</HashCode>
+      <FileName>IPlugStructs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="IMidiMsg" Collapsed="true">
+    <Position X="1.25" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAEQAgABAUAAQAUAAEAAAAAAIAAAACAgIAAABEAqA=</HashCode>
+      <FileName>IPlugStructs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ITimeInfo" Collapsed="true">
+    <Position X="4.75" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAQAAAkAAAAAQAAAAAAgAAAEAAAAIAgAABAACAAA=</HashCode>
+      <FileName>IPlugStructs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ISysEx" Collapsed="true">
+    <Position X="1.25" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAIAAABAAMA=</HashCode>
+      <FileName>IPlugStructs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="IPreset" Collapsed="true">
+    <Position X="4.75" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAAAgAAAAAAgA=</HashCode>
+      <FileName>IPlugStructs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Timer" Collapsed="true">
+    <Position X="3" Y="20.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAEAAA=</HashCode>
+      <FileName>Log.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="VstInt32" Collapsed="true">
+    <Position X="3" Y="25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPlugBase.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ycairo_text_w_aligement" Collapsed="true">
+    <Position X="4.75" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\YCAIRO\ycairo.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ycairo_text_h_aligement" Collapsed="true">
+    <Position X="6.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\YCAIRO\ycairo.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="resizeFlag" Collapsed="true">
+    <Position X="3" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPlugGUIResize.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="resizeOneSide" Collapsed="true">
+    <Position X="1.25" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPlugGUIResize.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="BYTE" Collapsed="true">
+    <Position X="1.25" Y="25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\swell\swell-types.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="EParamEditMsg" Collapsed="true">
+    <Position X="3" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAABAAAAAAAAQIAAAAAAAAAAE=</HashCode>
+      <FileName>IGraphicsWin.cpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="_ycairo_text_w_aligement" Collapsed="true">
+    <Position X="4.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAQAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\YCAIRO\ycairo.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="_ycairo_text_h_aligement" Collapsed="true">
+    <Position X="6.5" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAEAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\YCAIRO\ycairo.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EAPI" Collapsed="true">
+    <Position X="3" Y="23.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAQAAAEAAAAEAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Hosts.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EHost" Collapsed="true">
+    <Position X="1.25" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEwAAAAESAACCEAAEoAiQCJIEAAAADEIIGACAEAQAQA=</HashCode>
+      <FileName>Hosts.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EDirection" Collapsed="true">
+    <Position X="4.75" Y="23.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="_resizeFlag" Collapsed="true">
+    <Position X="3" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgQAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPlugGUIResize.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="_resizeOneSide" Collapsed="true">
+    <Position X="1.25" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAEAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPlugGUIResize.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EFileAction" Collapsed="true">
+    <Position X="6.5" Y="23.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>IPlugStructs.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_002d_1" Collapsed="true">
+    <Position X="1.25" Y="23.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIMAAAAAAAAAAEAAAAAACAAAAgAAAAQCAAAAEAAAA=</HashCode>
+      <FileName>IPlugStructs.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

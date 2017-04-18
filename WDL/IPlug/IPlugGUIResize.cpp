@@ -1356,7 +1356,7 @@ void IPlugGUIResize::ResizeAtGUIOpen()
 	if (!presets_loaded)
 	{
 		if (guiResizeParameters.Get(0)->Value() > -0.5)
-			current_view_mode = IPMIN((int)guiResizeParameters.Get(0)->Value(), view_container.view_mode.size());
+			current_view_mode = IPMIN((size_t)guiResizeParameters.Get(0)->Value(), view_container.view_mode.size());
 
 		if (guiResizeParameters.Get(1)->Value() > -0.5)
 			window_width_normalized = guiResizeParameters.Get(1)->Value();

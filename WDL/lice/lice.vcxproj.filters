@@ -168,4 +168,7 @@
     <ClInclude Include="..\lice\lice_text.h" />
     <ClInclude Include="lice.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
 </Project>

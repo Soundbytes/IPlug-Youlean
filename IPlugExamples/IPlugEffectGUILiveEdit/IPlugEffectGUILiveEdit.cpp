@@ -41,7 +41,7 @@ IPlugEffectGUILiveEdit::IPlugEffectGUILiveEdit(IPlugInstanceInfo instanceInfo)
 	GUI_EDIT_START;
 
 	NEW_LAYER;
-	IRECT knobPosition = DRAW_RECT(IRECT(110, 120, 158, 168));
+	IRECT knobPosition = DRAW_RECT(IRECT(40, 180, 90, 230));
 	IBitmap* knob = pGraphics->LoadPointerToBitmap(KNOB_ID, KNOB_FN, kKnobFrames);
 	pGraphics->AttachControl(new IKnobMultiControl(this, knobPosition.L, knobPosition.T, kGain, knob));
 	END;
@@ -49,7 +49,7 @@ IPlugEffectGUILiveEdit::IPlugEffectGUILiveEdit(IPlugInstanceInfo instanceInfo)
 	NEW_LAYER;
 	IColor textColor = IColor(255, 0, 0, 0);
 	IText textProps(24, &textColor, "Arial", IText::kStyleNormal, IText::kAlignCenter, 0, IText::kQualityDefault);
-	pGraphics->AttachControl(new ITextControl(this, DRAW_RECT(IRECT(70, 40, 210, 80)), &textProps, "Hello IPlug!"));
+	pGraphics->AttachControl(new ITextControl(this, DRAW_RECT(IRECT(40, 130, 180, 170)), &textProps, "Hello IPlug!"));
 	END;
 
 	// End Live GUI edit

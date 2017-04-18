@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="IPlugStandalone" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAADAAAAAAAIABBAACAAQEgCAAQIAAACAAAAIAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\IPlug\IPlugStandalone.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RtAudio" Collapsed="true">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACBAAAgAAgBAAEIAAAEAABAQABACAASgAQAACAIkAAg=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RtApi" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AChAgggAggBAACIgAAEAABBACJACBAQgAQAAEEIlAJg=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RtApiCore" Collapsed="true">
+    <Position X="2" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AChAAAgAAARAAAIAAAAAABAAAAACAAAAAQAAACIgCBA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RtApiJack" Collapsed="true">
+    <Position X="2" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACgAAAgAAABAAAIAAAAAABAAAACCAAAAAAAAAAIgCAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RtApiAsio" Collapsed="true">
+    <Position X="2" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACgAAAgAAADAAAIAAAAAABABAAACAAAAAAACAAIgiAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RtApiDs" Collapsed="true">
+    <Position X="2" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AChAQAgAAABAAAIAAAAAABAAAAACABBAAQACAAIwCAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RtApiAlsa" Collapsed="true">
+    <Position X="2" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKgAAAgAAACAAAIAAAAAABAAAAAGAAAAAAACAAIgCAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RtApiPulse" Collapsed="true">
+    <Position X="2" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACgAAAgAAACAABIAAAAAABAAAAACAAAAAAACAAIgCAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RtApiOss" Collapsed="true">
+    <Position X="2" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACgAAAgAAAAAAAIAAAAAABAAAAACCAAAgAAAAAIgCAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RtApiDummy" Collapsed="true">
+    <Position X="2" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADgAAAgAAAAAAAIAAAAAABAAAAACAAAAAAAAAAIgAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RtError" Collapsed="true">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAQACCAAAAAAAAAAABAAQAAAAAAAAAAAAAgABA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtError.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RtMidi" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAIACAAAAEAAAEAAYAAIAAACAAAAAAAgCAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtMidi.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RtMidiIn" Collapsed="true">
+    <Position X="5.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABEABAEAAAAAIAAAAAAAAAQCgCRgAEA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtMidi.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RtMidiOut" Collapsed="true">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAEAAQECAAAgIAAAAAAAAAAAgCAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtMidi.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AsioDrivers" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAQAAEAAAIAAAAAgAAAAAAAAABAACAAAAQAABAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asiodrivers.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AsioDriverList" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAgCAAAAAAAAAAAAAAAAAAAgACAABSIAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asiolist.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IPlugEffectGUIResize" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAACAAgAEAAAIAYAAAABIAAAgACgQA=</HashCode>
+      <FileName>IPlugEffectGUIResize.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="viewSelector" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAgAAAAAAAAAAQAAAAABAIAEAAAAAAAA=</HashCode>
+      <FileName>IPlugEffectGUIResize.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="handleSelector" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAIBAAAAQAgABAAAAABAAAAAAAAAAIQAAAAABAAA=</HashCode>
+      <FileName>IPlugEffectGUIResize.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="IPlugInstanceInfo" Collapsed="true">
+    <Position X="8.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\IPlug\IPlugStandalone.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="AppState" Collapsed="true">
+    <Position X="11.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAgAAACAAEAAAAAAEAgAAAAChAAAAAAFADICA=</HashCode>
+      <FileName>app_wrapper\app_main.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CoreHandle" Collapsed="true">
+    <Position X="11.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIBIAABAAAAAAAAAAAAAAAEAEBAAAAAAAEEAAgA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="JackHandle" Collapsed="true">
+    <Position X="11.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAEAAAAAACIAAAAAAEAAAAAAAAABEEAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="AsioHandle" Collapsed="true">
+    <Position X="15.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAEEAAAIAAAAAAAEAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DsHandle" Collapsed="true">
+    <Position X="17" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAIAAAAAAAAAIAAABAAAgAAEAAAAAAABAAEEAAgA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DsDevice" Collapsed="true">
+    <Position X="15.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAIAAAAAAAAAAAAEAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="AlsaHandle" Collapsed="true">
+    <Position X="8.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAgQAAAAAAAAIgAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="rtaudio_pa_format_mapping_t" Collapsed="true">
+    <Position X="8.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="PulseAudioHandle" Collapsed="true">
+    <Position X="17" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAEAAQAAAAAAAAIAAAABAAAAAAIAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="OssHandle" Collapsed="true">
+    <Position X="15.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAIAAAAAAAAAAEAAAgA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CoreMidiData" Collapsed="true">
+    <Position X="13.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAQAAAAAAAAgAAAEAAAAgAAAAABAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtMidi.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="AlsaMidiData" Collapsed="true">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAIAAEEAAQAIgAAAAAAAAAAIABAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtMidi.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="IrixMidiData" Collapsed="true">
+    <Position X="10" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtMidi.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="WinMidiData" Collapsed="true">
+    <Position X="10" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAgACAAAAAAAAAAAAgAAAACA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtMidi.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="JackMidiData" Collapsed="true">
+    <Position X="13.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAoAAAAAAAAgAAAAABAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtMidi.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Arguments" Collapsed="true">
+    <Position X="13.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtMidi.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CallbackInfo" Collapsed="true">
+    <Position X="10" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAhAAAAAACAAAAFAAAIAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ASIOSamples" Collapsed="true">
+    <Position X="10" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ASIOTimeStamp" Collapsed="true">
+    <Position X="17" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ASIOSampleRate" Collapsed="true">
+    <Position X="8.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ASIOTimeCode" Collapsed="true">
+    <Position X="13.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAQAAAQAAAAAAAAQ=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="AsioTimeInfo" Collapsed="true">
+    <Position X="15.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAIAAAIAAAAAAAAAAAAAQAAAAAAAAAAAIQ=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ASIOTime" Collapsed="true">
+    <Position X="11.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ASIOCallbacks" Collapsed="true">
+    <Position X="17" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIAAAAIAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ASIODriverInfo" Collapsed="true">
+    <Position X="13.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAACAAAAAAAAAAAABAAEAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ASIOClockSource" Collapsed="true">
+    <Position X="11.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAEAAAAIABAAAABAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ASIOChannelInfo" Collapsed="true">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAIAAAAAAAABAAAAAFAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ASIOBufferInfo" Collapsed="true">
+    <Position X="15.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ASIOInputMonitor" Collapsed="true">
+    <Position X="17" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAACAAAABAEAQAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ASIOChannelControls" Collapsed="true">
+    <Position X="8.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAQAIAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ASIOTransportParameters" Collapsed="true">
+    <Position X="8.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAQAAAAAAQAABAAAAIA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ASIOIoFormat_s" Collapsed="true">
+    <Position X="4.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAgAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="asiodrvstruct" Collapsed="true">
+    <Position X="4.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACBAwIAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asiolist.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="UInt16" Collapsed="true">
+    <Position X="15.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>app_wrapper\app_main.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="RtAudioFormat" Collapsed="true">
+    <Position X="17" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="RtAudioStreamFlags" Collapsed="true">
+    <Position X="8.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="RtAudioStreamStatus" Collapsed="true">
+    <Position X="10" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="RtAudioCallback" Collapsed="true">
+    <Position X="15.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ThreadHandle" Collapsed="true">
+    <Position X="13.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="StreamMutex" Collapsed="true">
+    <Position X="11.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\WDL\rtaudiomidi\RtAudio.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ASIOBool" Collapsed="true">
+    <Position X="8.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ASIOSampleType" Collapsed="true">
+    <Position X="13.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ASIOError" Collapsed="true">
+    <Position X="10" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ASIOIoFormatType" Collapsed="true">
+    <Position X="11.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ASIOIoFormat" Collapsed="true">
+    <Position X="4.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ASIODRVSTRUCT" Collapsed="true">
+    <Position X="4.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asiolist.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPASIODRVSTRUCT" Collapsed="true">
+    <Position X="4.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asiolist.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPASIODRIVERLIST" Collapsed="true">
+    <Position X="4.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asiolist.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Interface Name="IASIO" Collapsed="true">
+    <Position X="8.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAACAAAAgIoBgAAAAAAAAAAAgAAIAAQAbgBAAEEQ=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\iasiodrv.h</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="__unnamed_enum_0002_1" Collapsed="true">
+    <Position X="8.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0002_2" Collapsed="true">
+    <Position X="10" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAABQAggAAAAAQAABAAAEgAAAAAAAABAAKgKAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0002_3" Collapsed="true">
+    <Position X="11.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAQAAAAAAIAABAAAQIAAAEEAAAAAABAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ASIOTimeCodeFlags" Collapsed="true">
+    <Position X="10" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAQAAAIAAAAMAAAAAAAAAEAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AsioTimeInfoFlags" Collapsed="true">
+    <Position X="11.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIQAAAAAAAAAAAABAAAQAAAAIAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0002_4" Collapsed="true">
+    <Position X="13.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAEAAQAAAAAgwAAIAAAIAAACQABAIBAgAAAAAAIAAg=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0002_5" Collapsed="true">
+    <Position X="15.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAQEgAAAAKgQAAAAgAIQAAAAAIAhAACAABQAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0002_6" Collapsed="true">
+    <Position X="17" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAEAAAAAAQAAACAABAkQAAJAAAAAgAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ASIOIoFormatType_e" Collapsed="true">
+    <Position X="8.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\ASIO_SDK\asio.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EParams" Collapsed="true">
+    <Position X="15.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPlugEffectGUIResize.cpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ELayout" Collapsed="true">
+    <Position X="13.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAABAAAAAAAAABAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>IPlugEffectGUIResize.cpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="viewSets" Collapsed="true">
+    <Position X="17" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAEAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPlugEffectGUIResize.cpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
