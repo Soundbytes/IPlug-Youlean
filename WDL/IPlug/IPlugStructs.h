@@ -586,7 +586,14 @@ struct IMidiMsg
     kUndefined117 = 117,
     kUndefined118 = 118,
     kUndefined119 = 119,
-    kAllNotesOff = 123
+	kAllSoundsOff = 120,		// Mutes all sounding notes. It does so regardless of release time or sustain.
+	kResetAllControllers = 121, // Reset all controllers to their default.
+	kLocalOnOff = 122,		 
+	kAllNotesOff = 123,			// Mutes all sounding notes. Release time and sustain are observed.
+	kOmniModeOff = 124,
+	kOmniModeOn = 125,
+	kMonoMode = 126,
+	kPolyMode = 127
   };
 
   IMidiMsg(int offs = 0, BYTE s = 0, BYTE d1 = 0, BYTE d2 = 0) : mOffset(offs), mStatus(s), mData1(d1), mData2(d2) {}
