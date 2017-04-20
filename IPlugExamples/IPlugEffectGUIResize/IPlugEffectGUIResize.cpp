@@ -1,6 +1,7 @@
 #include "IPlugEffectGUIResize.h"
 #include "IPlug_include_in_plug_src.h"
 #include "IControl.h"
+#include "SimpleCairoControl.h"
 #include "resource.h"
 
 const int kNumPrograms = 1;
@@ -73,7 +74,8 @@ IPlugEffectGUIResize::IPlugEffectGUIResize(IPlugInstanceInfo instanceInfo)
   helloIPlugIndex = pGraphics->AttachControl(new ITextControl(this, IRECT(80, 40, 220, 80), &textProps, "Hello IPlug!"));
 
   IBitmap* knob = pGraphics->LoadPointerToBitmap(KNOB_ID, KNOB_FN, kKnobFrames);
-  knobIndex = pGraphics->AttachControl(new IKnobMultiControl(this, kGainX, kGainY, kGain, knob));
+//  knobIndex = pGraphics->AttachControl(new IKnobMultiControl(this, kGainX, kGainY, kGain, knob));
+  knobIndex = pGraphics->AttachControl(new SimpleCairoControl(this, GetYCAIRO(), IRECT(100, 80, 200, 180), kGain));
   
   miniViewIndex = pGraphics->AttachControl(new viewSelector(this, IRECT(80, 200, 220, 220), "miniView", miniView));
   defaultViewIndex = pGraphics->AttachControl(new viewSelector(this, IRECT(80, 240, 220, 260), "defaultView", defaultView));

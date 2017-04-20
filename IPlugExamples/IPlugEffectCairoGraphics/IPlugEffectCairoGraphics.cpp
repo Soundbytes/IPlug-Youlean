@@ -1,6 +1,7 @@
 #include "IPlugEffectCairoGraphics.h"
 #include "IPlug_include_in_plug_src.h"
 #include "IControl.h"
+#include "SimpleCairoControl.h"
 #include "resource.h"
 
 const int kNumPrograms = 1;
@@ -18,7 +19,7 @@ IPlugEffectCairoGraphics::IPlugEffectCairoGraphics(IPlugInstanceInfo instanceInf
 
   GetYCAIRO()->attach_background(pGraphics, COLOR_GRAY);
 
-  pGraphics->AttachControl(new CustomCairoControl(this, GetYCAIRO(), IRECT(0, 0, GUI_WIDTH, GUI_HEIGHT)));
+  pGraphics->AttachControl(new SimpleCairoControl(this, GetYCAIRO(), IRECT(GUI_WIDTH*0.2, GUI_HEIGHT*0.2, GUI_WIDTH*0.8, GUI_HEIGHT*0.8)));
 
   AttachGraphics(pGraphics);
 

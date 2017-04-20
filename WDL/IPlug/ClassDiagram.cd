@@ -201,13 +201,6 @@
       <FileName>IControl.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="IURLControl" Collapsed="true">
-    <Position X="1.75" Y="6.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAgQAEAAAAgAAAAAAAAAAAAAAEQAAIAAAAAAAAAA=</HashCode>
-      <FileName>IControl.h</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="IFileSelectorControl" Collapsed="true">
     <Position X="1.75" Y="12.75" Width="1.5" />
     <TypeIdentifier>
@@ -218,7 +211,7 @@
   <Class Name="IGraphics" Collapsed="true">
     <Position X="7.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>d5JQM4k8RYwrn0GgQJj3LGrRUGJgGrwQ6MaHYc3zqBY=</HashCode>
+      <HashCode>d5JSM4k8RYwrn0GgQJj3LGrRcGJgGrwQ6MaHYc3zqBY=</HashCode>
       <FileName>IGraphics.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -253,7 +246,7 @@
   <Class Name="IPlugGUIResize" Collapsed="true">
     <Position X="1.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>HBAonSJCnTEbPkAWqldw4BEZaRGsMEaWo/OhCppbIK0=</HashCode>
+      <HashCode>PBAonSJCnTEbPkAWqldw4BEZaRGsMEaWo/OhCppbIK0=</HashCode>
       <FileName>IPlugGUIResize.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -292,6 +285,13 @@
       <FileName>Containers.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="IURLControl" Collapsed="true">
+    <Position X="1.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgQAEAAAAgAAAAAAAAAAAAAAEQAAIAAAAAAAAAA=</HashCode>
+      <FileName>IControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Struct Name="LogFile" Collapsed="true">
     <Position X="1.25" Y="20.25" Width="1.5" />
     <TypeIdentifier>
@@ -302,8 +302,8 @@
   <Struct Name="DRECT" Collapsed="true">
     <Position X="1.25" Y="18" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEUMAwA=</HashCode>
-      <FileName>IPlugGUIResize.h</FileName>
+      <HashCode>AAAAAAgAAAAAAAAAAAIAAQAAAEAAAAAAAAAgAEVMAwA=</HashCode>
+      <FileName>IPlugStructs.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="viewContainer" Collapsed="true">
@@ -351,7 +351,7 @@
   <Struct Name="IRECT" Collapsed="true">
     <Position X="6.5" Y="18.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAABAAAEAAAAAgAIEAQAEAEAAAAAEAAAAQUVcAYA=</HashCode>
+      <HashCode>AAADAABAAAEAAAAAgAIEAQAEAEAAAAAEAAAgQUVcAYA=</HashCode>
       <FileName>IPlugStructs.h</FileName>
     </TypeIdentifier>
   </Struct>

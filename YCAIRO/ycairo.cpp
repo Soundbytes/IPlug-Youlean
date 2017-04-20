@@ -249,14 +249,7 @@ ycairo_gui::ycairo_gui(ycairo_base * ycairo_base, IControl *pControl)
 {
 	mControl = pControl;
 
-	if (ycairo_base->GetIPlugBase()->GetGUIResize())
-	{
-		draw_rect = mControl->GetNonScaledDrawRECT();
-	}
-	else
-	{
-		draw_rect = mControl->GetDrawRECT();
-	}
+	draw_rect = mControl->GetDrawRECT();
 
 	base_width = ycairo_base->get_width();
 	base_height = ycairo_base->get_height();

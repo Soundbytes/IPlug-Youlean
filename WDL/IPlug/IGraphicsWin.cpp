@@ -705,7 +705,7 @@ void* IGraphicsWin::OpenWindow(void* pParentWnd)
   return mPlugWnd;
 }
 
-#define MAX_CLASSNAME_LEN 128
+const int  MAX_CLASSNAME_LEN = 128;
 void GetWndClassName(HWND hWnd, WDL_String* pStr)
 {
   char cStr[MAX_CLASSNAME_LEN];

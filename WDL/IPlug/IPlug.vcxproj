@@ -281,6 +281,7 @@
     <ClInclude Include="IPlugStructs.h" />
     <ClInclude Include="IPopupMenu.h" />
     <ClInclude Include="Log.h" />
+    <ClInclude Include="SimpleCairoControl.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

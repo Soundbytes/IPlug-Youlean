@@ -484,8 +484,8 @@ protected:
   bool mShowParamLabel;
 };
 
-#define MAX_URL_LEN 256
-#define MAX_NET_ERR_MSG_LEN 1024
+const int MAX_URL_LEN = 256;
+const int MAX_NET_ERR_MSG_LEN = 1024;
 
 class IURLControl : public IControl
 {
