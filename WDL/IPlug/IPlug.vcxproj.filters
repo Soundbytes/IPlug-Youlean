@@ -34,6 +34,7 @@
     <ClInclude Include="IPlugGUILiveEdit.h" />
     <ClInclude Include="IControlGroup.h" />
     <ClInclude Include="SimpleCairoControl.h" />
+    <ClInclude Include="CairoShapes.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

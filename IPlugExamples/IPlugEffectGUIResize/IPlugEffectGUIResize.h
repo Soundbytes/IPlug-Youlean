@@ -17,7 +17,8 @@ public:
 
 private:
   double mGain = 1.0;
-  int *knobIndex, *helloIPlugIndex, *miniViewIndex, *defaultViewIndex, *hugeViewIndex, *handleSelectorIndex;
+  int *pKnob1Idx, *pKnob2Idx, *pKnob3Idx, *pKnob4Idx;
+  int *helloIPlugIndex, *miniViewIndex, *defaultViewIndex, *hugeViewIndex, *handleSelectorIndex;
 };
 
 class viewSelector : public IControl

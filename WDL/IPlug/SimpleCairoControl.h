@@ -28,11 +28,6 @@ public:
 	bool Draw(IGraphics* pGraphics)
 	{
 		double v = mMinAngle + mValue * (mMaxAngle - mMinAngle);
-		double sinV = sin(v);
-		double cosV = cos(v);
-
-		double x1 = scaledInnerRadius * sinV, y1 = -scaledInnerRadius * cosV;
-		double x2 = scaledOuterRadius * sinV, y2 = -scaledOuterRadius * cosV;
 
 		ycairo_prepare_draw();
 
@@ -46,15 +41,21 @@ public:
 		cairo_set_line_width(cr, 1.5);
 		cairo_stroke(cr);
 
-		cairo_line_to(cr, x1, y1);
-		cairo_line_to(cr, x2, y2);
+		cairo_rotate(cr, v);
+
+		cairo_move_to(cr, 0, -scaledInnerRadius);
+		cairo_line_to(cr, 0, -scaledOuterRadius);
 
 		cairo_set_line_cap(cr, CAIRO_LINE_CAP_ROUND);
 		cairo_set_source_rgb(cr, 0.2, 0.2, 0.3);
-		cairo_set_line_width(cr, MARKER_WIDTH);
+		cairo_set_line_width(cr, markerWidth);
 		cairo_stroke(cr);
 
-		cairo_translate(cr, -mDrawRECT.MW(), -mDrawRECT.MH());
+		// Make sure to revert all transforms in REVERSE order! 
+		//cairo_rotate(cr, -v);
+		//cairo_translate(cr, -mDrawRECT.MW(), -mDrawRECT.MH());
+
+		cairo_identity_matrix(cr);
 
 		ycairo_draw();
 		return true;
@@ -64,10 +65,8 @@ public:
 		mGUIScaleRatio = guiScaleRatio;
 		scaledInnerRadius = mInnerRadius * mGUIScaleRatio;
 		scaledOuterRadius = mOuterRadius * mGUIScaleRatio;
-		MARKER_WIDTH = scaledOuterRadius * 0.2;
+		markerWidth = scaledOuterRadius * 0.2;
 		scaledOuterRadius *= 0.9;
-
-//		draw_rect = mDrawRECT;
 	}
 
 private:
@@ -75,7 +74,7 @@ private:
 
 	double mGUIScaleRatio;
 	double scaledInnerRadius, scaledOuterRadius;
-	double MARKER_WIDTH;
+	double markerWidth;
 };
 
 

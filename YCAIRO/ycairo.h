@@ -205,6 +205,8 @@ private:
 	ycairo_base *ycairo;
 
 protected:
+	cairo_t* CR() { cr = ycairo->get_cr(); return cr; }
+
 	cairo_surface_t *surface;
 	cairo_surface_t *surface_out;
 	cairo_t *cr;
