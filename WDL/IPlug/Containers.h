@@ -33,9 +33,9 @@ inline bool CSTR_NOT_EMPTY(const char* cStr) { return cStr != nullptr && cStr[0]
 #define MAKE_QUOTE(str) #str
 #define MAKE_STR(str) MAKE_QUOTE(str)
 
-const double PI = 3.141592653589793238;
-const double AMP_DB = 8.685889638065036553;
-const double IAMP_DB = 0.11512925464970;
+constexpr double PI = 3.141592653589793238;
+constexpr double AMP_DB = 8.685889638065036553;
+constexpr double IAMP_DB = 0.11512925464970;
 
 inline double DBToAmp(double dB) { return exp(IAMP_DB * dB); }
 inline double AmpToDB(double amp) { return AMP_DB * log(fabs(amp)); }

@@ -17,44 +17,71 @@ struct Point {
 	double X;
 	double Y;
 
-	const Point& translate(double dX, double dY) {
+	//Point(Point& const p) : X(p.X), Y(p.Y){}
+
+	const Point& translateMe(double dX, double dY) {
 		X += dX; Y += dY;
 		return *this;
 	}
-	const Point& scale(double scl) {
-		X *= scl; Y *= scl;
-		return *this;
-	}
-	const Point& rotate(double ang) {
-		rotateSinCos(sin(ang), cos(ang));
-		return *this;
-	}
-	const Point& rotate(double ang, const Point& pivot) {
-		X -= pivot.X;
-		Y -= pivot.Y;
-		rotateSinCos(sin(ang), cos(ang));
-		X += pivot.X;
-		Y += pivot.Y;
-		return *this;
-	}
-	const Point& rotaScale(Complex c) {
-		rotateSinCos(c.R, c.I);
-		return *this;
-	}
-	const Point& rotaScale(Complex c, const Point& pivot) {
-		X -= pivot.X;
-		Y -= pivot.Y;
-		rotateSinCos(c.R, c.I);
-		X += pivot.X;
-		Y += pivot.Y;
+	const Point& translateMe(Point d) {
+		X += d.X; Y += d.Y;
 		return *this;
 	}
 
-private:
-	void rotateSinCos(double s, double c) {
-		double xTmp = (X * c) - (Y * s);
-		Y = (X * s) - (Y * c);
+	const Point& scaleMe(double scl) {
+		X *= scl; Y *= scl;
+		return *this;
+	}
+	const Point& rotateMe(double ang) {
+		rotateMe(sin(ang), cos(ang));
+		return *this;
+	}
+	const Point& rotateMe(double ang, const Point& pivot) {
+		X -= pivot.X;
+		Y -= pivot.Y;
+		rotateMe(sin(ang), cos(ang));
+		X += pivot.X;
+		Y += pivot.Y;
+		return *this;
+	}
+	const Point& rotateMe(Complex c) {
+		rotateMe(c.R, c.I);
+		return *this;
+	}
+	const Point& rotateMe(Complex c, const Point& pivot) {
+		X -= pivot.X;
+		Y -= pivot.Y;
+		rotateMe(c.R, c.I);
+		X += pivot.X;
+		Y += pivot.Y;
+		return *this;
+	}
+	Point& rotateMe(double sin, double cos) {
+		double xTmp = (X * cos) - (Y * sin);
+		Y = (X * sin) - (Y * cos);
 		X = xTmp;
+		return *this;
+	}
+
+	Point translate(double dX, double dY) {
+		return Point(X + dX, Y + dY);
+	}
+	Point scale(double scl) {
+		return Point(X * scl, Y * scl);
+	}
+	Point rotate(double ang) {
+		return Point(*this).rotateMe(sin(ang), cos(ang));
+	}
+	Point rotate(double ang, const Point& pivot) {
+		Point pt(X - pivot.X, Y - pivot.Y);
+		return pt.rotateMe(sin(ang), cos(ang)).translateMe(pivot);
+	}
+	Point rotate(Complex c) {
+		return Point(*this).rotateMe(c.R, c.I);
+	}
+	Point rotate(Complex c, const Point& pivot) {
+		Point pt(X - pivot.X, Y - pivot.Y);
+		return pt.rotateMe(c.R, c.I).translateMe(pivot);
 	}
 };
 
@@ -92,6 +119,11 @@ public:
 		Point pO(scaledOuterRadius, 0);
 		Point pI(scaledInnerRadius, 0);
 
+		Point pIMin = pI.rotate(MIN_ANGLE);
+		Point pIAng = pI.rotate(ang);
+		Point pIMax = pIMin.rotate(KNOB_RANGE);
+
+		// Kreis
 		cairo_arc(cr, 0, 0, scaledInnerRadius, 0, 2 * PI);
 		cai_set_source_icol(cr, colKnob);
 		cairo_fill_preserve(cr);
@@ -101,29 +133,55 @@ public:
 		cairo_stroke(cr);
 
 
+		//Cold
 		cairo_arc(cr, 0, 0, scaledOuterRadius, ang, MIN_ANGLE + KNOB_RANGE);
+		cairo_arc_negative(cr, 0, 0, scaledInnerRadius, MIN_ANGLE + KNOB_RANGE, ang);
+		cairo_close_path(cr);
+
 		cai_set_source_icol(cr, colCold);
-		cairo_stroke(cr);
+		cairo_fill_preserve(cr);
 
-		cairo_arc(cr, 0, 0, scaledOuterRadius, MIN_ANGLE, ang);
-
-		Complex siCo(ang);
-		pI.rotaScale(siCo);
-		cairo_line_to(cr, pI.X, pI.Y);
-		cai_set_source_icol(cr, colHot);
-		cairo_stroke(cr);
-
-		cairo_move_to(cr, pI.X, pI.Y);
-		cairo_line_to(cr, 0, 0);
 		cai_set_source_icol(cr, colBlack);
 		cairo_stroke(cr);
 
-		cai_set_source_icol(cr, colBotm);
-		cairo_arc(cr, 0, 0, scaledOuterRadius, MIN_ANGLE + KNOB_RANGE, MIN_ANGLE);
+
+
+		//Hot
+		cairo_arc(cr, 0, 0, scaledOuterRadius, MIN_ANGLE, ang);
+		cairo_arc_negative(cr, 0, 0, scaledInnerRadius, ang, MIN_ANGLE);
+		cairo_close_path(cr);
+
+		cai_set_source_icol(cr, colHot);
+		cairo_fill_preserve(cr);
+
+		cai_set_source_icol(cr, colBlack);
 		cairo_stroke(cr);
 
-		cairo_identity_matrix(cr);
+		//Bottom
+		cairo_arc(cr, 0, 0, scaledOuterRadius, MIN_ANGLE + KNOB_RANGE, MIN_ANGLE);
+		cairo_arc_negative(cr, 0, 0, scaledInnerRadius, MIN_ANGLE, MIN_ANGLE + KNOB_RANGE);
+		cairo_close_path(cr);
 
+		cai_set_source_icol(cr, colBotm);
+		cairo_fill_preserve(cr);
+
+		cai_set_source_icol(cr, colBlack);
+		cairo_stroke(cr);
+
+		//Marker
+		cairo_rotate(cr, ang);
+		cairo_move_to(cr, MRK_TIP * scaledOuterRadius, 0);
+		cairo_line_to(cr, MRK_HG0 * scaledOuterRadius, MRK_WD1 * scaledOuterRadius);
+		cairo_line_to(cr, MRK_BTM * scaledOuterRadius, MRK_WD0 * scaledOuterRadius);
+		cairo_line_to(cr, MRK_BTM * scaledOuterRadius, -MRK_WD0 * scaledOuterRadius);
+		cairo_line_to(cr, MRK_HG0 * scaledOuterRadius, -MRK_WD1 * scaledOuterRadius);
+		cairo_close_path(cr);
+		cai_set_source_icol(cr, colBlack);
+		cairo_fill(cr);
+
+
+
+		cairo_identity_matrix(cr);
 		ycairo_draw();
 		return true;
 	}
@@ -140,11 +198,18 @@ private:
 	double mGUIScaleRatio;
 	double scaledInnerRadius, scaledOuterRadius;
 
-	const double MIN_ANGLE = 0.666666666 * PI;
-	const double KNOB_RANGE = 1.666666666 * PI;
+	constexpr static double MIN_ANGLE = 0.666666666 * PI;
+	constexpr static double KNOB_RANGE = 1.666666666 * PI;
+	constexpr static double MAX_ANGLE = 1.666666666 * PI;
 
-	const double INNER_RATIO = 0.6;
-	const double LINE_WIDTH = 1.5;
+	constexpr static double INNER_RATIO = 0.66;
+	constexpr static double MRK_TIP = 0.87;
+	constexpr static double MRK_HG0 = 0.64;
+	constexpr static double MRK_WD0 = 0.14;
+	constexpr static double MRK_WD1 = 0.24;
+	constexpr static double MRK_BTM = 0.33;
+
+	constexpr static double LINE_WIDTH = 1;
 };
 
 class SbKnob1 : public IKnobControl, ycairo_gui
@@ -184,7 +249,7 @@ public:
 
 
 		Complex siCo(ang);
-		pI.rotaScale(siCo);
+		pI.rotate(siCo);
 		cairo_line_to(cr, pI.X, pI.Y);
 		cairo_set_source_rgb(cr, 0.9, 0.9, 0.9);
 		cairo_stroke(cr);
