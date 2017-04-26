@@ -22,8 +22,8 @@
 #include "../wdlendian.h"
 
 template<typename P> inline void FREE_NULL(P* p) { free(p); p = 0; }
-template<typename P> inline void DELETE_NULL(P* p) { delete(p); p = 0; }
-template<typename P> inline void DELETE_ARRAY(P* p) { delete[](p); (p) = 0; }
+template<typename P> inline void DELETE_NULL(P* p) { delete p; p = nullptr; }
+template<typename P> inline void DELETE_ARRAY(P* p) { delete[] p; p = nullptr; }
 template<typename T> inline T IPMIN(T x, T y) { return x < y ? x : y; }
 template<typename T> inline T IPMAX(T x, T y) { return x < y ? y : x; }
 template<typename T> inline T BOUNDED(T x, T lo, T hi) { return x < lo ? lo : x > hi ? hi : x; }

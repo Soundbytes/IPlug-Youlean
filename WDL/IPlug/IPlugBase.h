@@ -349,7 +349,7 @@ protected:
 
 private:
 	IGraphics* mGraphics;
-	IPlugGUIResize* mGUIResize = NULL;
+	IPlugGUIResize* mGUIResize;
 	WDL_PtrList<IParam> mParams;
 	WDL_PtrList<IPreset> mPresets;
 	WDL_TypedBuf<double*> mInData, mOutData;

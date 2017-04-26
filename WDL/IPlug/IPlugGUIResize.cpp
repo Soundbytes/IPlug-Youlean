@@ -1638,94 +1638,12 @@ bool IPlugGUIResize::IsDirty()
 	if (using_bitmaps && plugin_resized && !gui_should_be_closed && !currentlyFastResizing)
 	{
 		gui_should_be_closed = !double_equals(global_gui_scale_ratio, gui_scale_ratio);
-
+		assert(!gui_should_be_closed);
 		if (gui_should_be_closed)
 		{
 			mTargetRECT = mDrawRECT = IRECT(0, 0, plugin_width, plugin_height);
 		}
 	}
-
 	return gui_should_be_closed;
 }
 
-
-// Horizontal handle ------------------------------------------------------------------------------------
-HorizontalResizing::HorizontalResizing(IPlugBase *pPlug, IGraphics *pGraphics, int width)
-	: IControl(pPlug, IRECT(pGraphics->Width() - width, 0, pGraphics->Width(), pGraphics->Height()))
-{
-	mGraphics = pGraphics;
-	mGraphics->HandleMouseOver(true);
-}
-
-bool HorizontalResizing::Draw(IGraphics * pGraphics)
-{
-	//pGraphics->FillIRect(&COLOR_RED, &mDrawRECT);
-	return true;
-}
-
-void HorizontalResizing::OnMouseDown(int x, int y, IMouseMod * pMod)
-{
-	SetCursor(LoadCursor(NULL, IDC_SIZEWE));
-}
-
-void HorizontalResizing::OnMouseDrag(int x, int y, int dX, int dY, IMouseMod * pMod)
-{
-	SetCursor(LoadCursor(NULL, IDC_SIZEWE));
-
-	double window_width_normalized = (double)x / GetGUIResize()->GetGUIScaleRatio();
-
-	GetGUIResize()->SetWindowWidth(window_width_normalized);
-
-	GetGUIResize()->ResizeGraphics();
-}
-
-void HorizontalResizing::OnMouseOver(int x, int y, IMouseMod * pMod)
-{
-	SetCursor(LoadCursor(NULL, IDC_SIZEWE));
-}
-
-void HorizontalResizing::OnMouseOut()
-{
-	SetCursor(LoadCursor(NULL, IDC_ARROW));
-}
-
-
-// Vertical handle ------------------------------------------------------------------------------------
-VerticalResizing::VerticalResizing(IPlugBase *pPlug, IGraphics *pGraphics, int height)
-	: IControl(pPlug, IRECT(0, pGraphics->Height() - height, pGraphics->Width(), pGraphics->Height()))
-{
-	mGraphics = pGraphics;
-	mGraphics->HandleMouseOver(true);
-}
-
-bool VerticalResizing::Draw(IGraphics * pGraphics)
-{
-	//pGraphics->FillIRect(&COLOR_GREEN, &mDrawRECT);
-	return true;
-}
-
-void VerticalResizing::OnMouseDown(int x, int y, IMouseMod * pMod)
-{
-	SetCursor(LoadCursor(NULL, IDC_SIZENS));
-}
-
-void VerticalResizing::OnMouseDrag(int x, int y, int dX, int dY, IMouseMod * pMod)
-{
-	SetCursor(LoadCursor(NULL, IDC_SIZENS));
-
-	double window_height_normalized = (double)y / GetGUIResize()->GetGUIScaleRatio();
-
-	GetGUIResize()->SetWindowHeight(window_height_normalized);
-
-	GetGUIResize()->ResizeGraphics();
-}
-
-void VerticalResizing::OnMouseOver(int x, int y, IMouseMod * pMod)
-{
-	SetCursor(LoadCursor(NULL, IDC_SIZENS));
-}
-
-void VerticalResizing::OnMouseOut()
-{
-	SetCursor(LoadCursor(NULL, IDC_ARROW));
-}

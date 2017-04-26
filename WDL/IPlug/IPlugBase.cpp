@@ -164,10 +164,7 @@ IPlugBase::~IPlugBase()
   mInputBusLabels.Empty(true);
   mOutputBusLabels.Empty(true);
  
-  if (mDelay) 
-  {
-    DELETE_NULL(mDelay);
-  }
+  if (mDelay) DELETE_NULL(mDelay);
 
 #ifdef USING_YCAIRO
   DELETE_NULL(ycairo);

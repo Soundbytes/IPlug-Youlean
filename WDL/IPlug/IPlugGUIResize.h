@@ -1,5 +1,4 @@
-#ifndef _IPLUGGUIRESIZE_
-#define _IPLUGGUIRESIZE_
+#pragma once
 
 /*
 Youlean - IPlugGUIResize - GUI resizing class
@@ -152,7 +151,9 @@ class IPlugGUIResize : public IControl
 {
 public:
 	IPlugGUIResize(IPlugBase *pPlug, IGraphics *pGraphics, bool useHandle = true, int controlSize = 0, int minimumControlSize = 10);
-	~IPlugGUIResize(){}
+	~IPlugGUIResize() {
+		if (pGlobalLayout) DELETE_NULL(pGlobalLayout);
+	}
 
 	// These must be called in your plugin constructor -----------------------------------------------------------------------------------------------------
 	void UsingBitmaps();
@@ -336,9 +337,6 @@ private:
 	ViewContainer view;
 	LayoutContainer* pGlobalLayout;
 
-//	vector <LayoutContainer> layout;
-	vector <bool> controls_visibility;
-
 	bool use_handle = true;
 	bool handle_controls_gui_scaling = false;
 	bool control_and_click_on_handle_controls_gui_scaling = false;
@@ -384,42 +382,73 @@ private:
 	friend class IPlugGUILiveEdit;
 };
 
-
 // One side handle classes
+// BaseResizing  - Base class for Horizontal and Vertical Handles ------------------------------------
+class BaseResizing : public IControl
+{
+public:
+	BaseResizing::BaseResizing(IPlugBase *pPlug, IGraphics *pGraphics, int width)
+		: IControl(pPlug, IRECT(pGraphics->Width() - width, 0, pGraphics->Width(), pGraphics->Height())) {
+		mGraphics = pGraphics;
+		mGraphics->HandleMouseOver(true);
+	}
+protected:
+	~BaseResizing() {} // protected destructor prevents instatiation of base class
+public:
+	bool BaseResizing::Draw(IGraphics * pGraphics) {
+		return true;
+	}
+	void BaseResizing::OnMouseDrag(int x, int y, int dX, int dY, IMouseMod * pMod) {
+		double window_width_normalized = (double)x / GetGUIResize()->GetGUIScaleRatio();
+		GetGUIResize()->SetWindowWidth(window_width_normalized);
+		GetGUIResize()->ResizeGraphics();
+	}
+private:
+	IGraphics* mGraphics;
+};
+
+// Horizontal handle ------------------------------------------------------------------------------------
 // NOTE: Horizontal control position is control size - 2
-class HorizontalResizing : public IControl
+class HorizontalResizing : public BaseResizing
 {
 public:
-	HorizontalResizing(IPlugBase *pPlug, IGraphics *pGraphics, int width);
+	HorizontalResizing::HorizontalResizing(IPlugBase *pPlug, IGraphics *pGraphics, int width)
+		: BaseResizing(pPlug, pGraphics, width) {}
 
-	~HorizontalResizing() {}
-
-	bool Draw(IGraphics* pGraphics);
-	void OnMouseDown(int x, int y, IMouseMod * pMod);
-	void OnMouseDrag(int x, int y, int dX, int dY, IMouseMod * pMod);
-	void OnMouseOver(int x, int y, IMouseMod * pMod);
-	void OnMouseOut();
-
-private:
-	IGraphics* mGraphics;
+	void HorizontalResizing::OnMouseDown(int x, int y, IMouseMod * pMod) {
+		SetCursor(LoadCursor(NULL, IDC_SIZEWE));
+	}
+	void HorizontalResizing::OnMouseDrag(int x, int y, int dX, int dY, IMouseMod * pMod) {
+		BaseResizing::OnMouseDrag(x, y, dX, dY, pMod);
+		SetCursor(LoadCursor(NULL, IDC_SIZEWE));
+	}
+	void HorizontalResizing::OnMouseOver(int x, int y, IMouseMod * pMod) {
+		SetCursor(LoadCursor(NULL, IDC_SIZEWE));
+	}
+	void HorizontalResizing::OnMouseOut() {
+		SetCursor(LoadCursor(NULL, IDC_ARROW));
+	}
 };
 
+// Vertical handle ------------------------------------------------------------------------------------
 // NOTE: Vertical control position is control size - 3
-class VerticalResizing : public IControl
+class VerticalResizing : public BaseResizing
 {
 public:
-	VerticalResizing(IPlugBase *pPlug, IGraphics *pGraphics, int height);
+	VerticalResizing::VerticalResizing(IPlugBase *pPlug, IGraphics *pGraphics, int width)
+		: BaseResizing(pPlug, pGraphics, width) {}
 
-	~VerticalResizing() {}
-
-	bool Draw(IGraphics* pGraphics);
-	void OnMouseDown(int x, int y, IMouseMod * pMod);
-	void OnMouseDrag(int x, int y, int dX, int dY, IMouseMod * pMod);
-	void OnMouseOver(int x, int y, IMouseMod * pMod);
-	void OnMouseOut();
-
-private:
-	IGraphics* mGraphics;
+	void VerticalResizing::OnMouseDown(int x, int y, IMouseMod * pMod) {
+		SetCursor(LoadCursor(NULL, IDC_SIZENS));
+	}
+	void VerticalResizing::OnMouseDrag(int x, int y, int dX, int dY, IMouseMod * pMod) {
+		BaseResizing::OnMouseDrag(x, y, dX, dY, pMod);
+		SetCursor(LoadCursor(NULL, IDC_SIZENS));
+	}
+	void VerticalResizing::OnMouseOver(int x, int y, IMouseMod * pMod) {
+		SetCursor(LoadCursor(NULL, IDC_SIZENS));
+	}
+	void VerticalResizing::OnMouseOut() {
+		SetCursor(LoadCursor(NULL, IDC_ARROW));
+	}
 };
-
-#endif
