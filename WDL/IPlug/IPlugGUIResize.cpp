@@ -45,22 +45,6 @@ DRECT IPlugGUIResize::RescaleToDRECT(DRECT *old_IRECT, double width_ratio, doubl
 	return DRECT(old_IRECT->L * width_ratio, old_IRECT->T * height_ratio, old_IRECT->R * width_ratio, old_IRECT->B * height_ratio);
 }
 
-void IPlugGUIResize::GetContainingControls(vector<IControl*> *containingControls, IControl *pControl)
-{
-	containingControls->resize(0);
-	int numberOfControls = mGraphics->GetNControls() - 3;
-
-	for (int i = 0; i < numberOfControls; i++)
-	{
-		IControl *tmpControl = mGraphics->GetControl(i);
-
-		if (pControl->GetDrawRECT()->Contains(tmpControl->GetDrawRECT()))
-		{
-			containingControls->push_back(tmpControl);
-		}
-	}
-}
-
 DRECT * IPlugGUIResize::GetLayoutContainerDrawRECT(int viewMode, IControl * pControl)
 {
 	int position = FindLayoutPointerPosition(viewMode, pControl);
@@ -781,28 +765,6 @@ void IPlugGUIResize::RelativelyMoveControl(IControl* pControl, double x, double 
 	MoveControl(pControl, xRelative, yRelative, flag);
 }
 
-void IPlugGUIResize::MoveAllContainingControls(int index, double x, double y, resizeFlag flag)
-{
-	IControl* pControl = mGraphics->GetControl(index);
-	MoveAllContainingControls(pControl, x, y, flag);
-}
-
-void IPlugGUIResize::MoveAllContainingControls(IControl* pControl, double x, double y, resizeFlag flag)
-{
-	vector<IControl*> containingControls;
-	GetContainingControls(&containingControls, pControl);
-
-	for (int i = 0; i < containingControls.size(); i++)
-	{
-		double xRelative = pControl->GetDrawRECT()->L - x;
-		double yRelative = pControl->GetDrawRECT()->T - y;
-
-		RelativelyMoveControl(containingControls[i], xRelative, yRelative, flag);
-	}
-
-	MoveControl(pControl, x, y, flag);
-}
-
 void IPlugGUIResize::MoveControlHorizontally(int index, double x, resizeFlag flag)
 {
 	IControl* pControl = mGraphics->GetControl(index);
@@ -1098,11 +1060,18 @@ void IPlugGUIResize::ResizeControlRelativeToWindowSize(int index, resizeFlag fla
 
 void IPlugGUIResize::ResizeControlRelativeToWindowSize(IControl* pControl, resizeFlag flag)
 {
+	DRECT *orgDrawArea = NULL, *orgTargetArea = NULL;
+	orgDrawArea = GetLayoutContainerDrawRECT(current_view_mode, pControl);
+	orgTargetArea = GetLayoutContainerTargetRECT(current_view_mode, pControl);
+
 	if (flag == drawAndTargetArea || flag == drawAreaOnly)
 	{
 		DRECT constructorDrawRect = (*pGlobalLayout)[*pControl->GetLayerPosition()].org_draw_area;
 
 		DRECT nonScaledDrawRect = RescaleToDRECT(&constructorDrawRect, GetWidnowSizeWidthRatio(), GetWidnowSizeHeightRatio());
+
+		*orgDrawArea = nonScaledDrawRect;
+
 		IRECT drawRect = RescaleToIRECT(&nonScaledDrawRect, gui_scale_ratio, gui_scale_ratio);
 
 		pControl->SetDrawRECT(drawRect);
@@ -1114,6 +1083,9 @@ void IPlugGUIResize::ResizeControlRelativeToWindowSize(IControl* pControl, resiz
 		DRECT constructorTargetRect = (*pGlobalLayout)[*pControl->GetLayerPosition()].org_draw_area;
 
 		DRECT nonScaledTargetRect = RescaleToDRECT(&constructorTargetRect, GetWidnowSizeWidthRatio(), GetWidnowSizeHeightRatio());
+
+		*orgTargetArea = nonScaledTargetRect;
+
 		IRECT targetRect = RescaleToIRECT(&nonScaledTargetRect, gui_scale_ratio, gui_scale_ratio);
 
 		pControl->SetTargetRECT(targetRect);
@@ -1128,11 +1100,18 @@ void IPlugGUIResize::ResizeControlHorizontalyRelativeToWindowSize(int index, res
 
 void IPlugGUIResize::ResizeControlHorizontalyRelativeToWindowSize(IControl* pControl, resizeFlag flag)
 {
+	DRECT *orgDrawArea = NULL, *orgTargetArea = NULL;
+	orgDrawArea = GetLayoutContainerDrawRECT(current_view_mode, pControl);
+	orgTargetArea = GetLayoutContainerTargetRECT(current_view_mode, pControl);
+
 	if (flag == drawAndTargetArea || flag == drawAreaOnly)
 	{
 		DRECT constructorDrawRect = (*pGlobalLayout)[*pControl->GetLayerPosition()].org_draw_area;
 
 		DRECT nonScaledDrawRect = RescaleToDRECT(&constructorDrawRect, GetWidnowSizeWidthRatio(), 1.0);
+
+		*orgDrawArea = nonScaledDrawRect;
+
 		IRECT drawRect = RescaleToIRECT(&nonScaledDrawRect, gui_scale_ratio, gui_scale_ratio);
 
 		pControl->SetDrawRECT(drawRect);
@@ -1144,6 +1123,9 @@ void IPlugGUIResize::ResizeControlHorizontalyRelativeToWindowSize(IControl* pCon
 		DRECT constructorTargetRect = (*pGlobalLayout)[*pControl->GetLayerPosition()].org_draw_area;
 
 		DRECT nonScaledTargetRect = RescaleToDRECT(&constructorTargetRect, GetWidnowSizeWidthRatio(), 1.0);
+
+		*orgTargetArea = nonScaledTargetRect;
+
 		IRECT targetRect = RescaleToIRECT(&nonScaledTargetRect, gui_scale_ratio, gui_scale_ratio);
 
 		pControl->SetTargetRECT(targetRect);
@@ -1158,11 +1140,18 @@ void IPlugGUIResize::ResizeControlVerticallyRelativeToWindowSize(int index, resi
 
 void IPlugGUIResize::ResizeControlVerticallyRelativeToWindowSize(IControl* pControl, resizeFlag flag)
 {
+	DRECT *orgDrawArea = NULL, *orgTargetArea = NULL;
+	orgDrawArea = GetLayoutContainerDrawRECT(current_view_mode, pControl);
+	orgTargetArea = GetLayoutContainerTargetRECT(current_view_mode, pControl);
+
 	if (flag == drawAndTargetArea || flag == drawAreaOnly)
 	{
 		DRECT constructorDrawRect = (*pGlobalLayout)[*pControl->GetLayerPosition()].org_draw_area;
 
 		DRECT nonScaledDrawRect = RescaleToDRECT(&constructorDrawRect, 1.0, GetWidnowSizeHeightRatio());
+
+		*orgDrawArea = nonScaledDrawRect;
+
 		IRECT drawRect = RescaleToIRECT(&nonScaledDrawRect, gui_scale_ratio, gui_scale_ratio);
 
 		pControl->SetDrawRECT(drawRect);
@@ -1174,6 +1163,9 @@ void IPlugGUIResize::ResizeControlVerticallyRelativeToWindowSize(IControl* pCont
 		DRECT constructorTargetRect = (*pGlobalLayout)[*pControl->GetLayerPosition()].org_draw_area;
 
 		DRECT nonScaledTargetRect = RescaleToDRECT(&constructorTargetRect, 1.0, GetWidnowSizeHeightRatio());
+
+		*orgTargetArea = nonScaledTargetRect;
+
 		IRECT targetRect = RescaleToIRECT(&nonScaledTargetRect, gui_scale_ratio, gui_scale_ratio);
 
 		pControl->SetTargetRECT(targetRect);
