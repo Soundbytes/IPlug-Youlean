@@ -17,20 +17,10 @@ DRECT IPlugGUIResize::IRECT_to_DRECT(IRECT *iRECT)
 
 IRECT IPlugGUIResize::DRECT_to_IRECT(DRECT *dRECT)
 {
-	int L = 0, T = 0, R = 0, B = 0;
-
-	if (dRECT->L >= 0) L = (int)(dRECT->L + 0.5);
-	else  L = (int)(dRECT->L - 0.5);
-
-	if (dRECT->T >= 0) T = (int)(dRECT->T + 0.5);
-	else T = (int)(dRECT->T - 0.5);
-
-	if (dRECT->R >= 0) R = (int)(dRECT->R + 0.5);
-	else R = (int)(dRECT->R - 0.5);
-
-	if (dRECT->B >= 0) B = (int)(dRECT->B + 0.5);
-	else B = (int)(dRECT->B - 0.5);
-
+	int L = (dRECT->L >= 0)? (int)(dRECT->L + 0.5) : (int)(dRECT->L - 0.5);
+	int T = (dRECT->T >= 0)? (int)(dRECT->T + 0.5) : (int)(dRECT->T - 0.5);
+	int R = (dRECT->R >= 0)? (int)(dRECT->R + 0.5) : (int)(dRECT->R - 0.5);
+	int B = (dRECT->B >= 0)? (int)(dRECT->B + 0.5) : (int)(dRECT->B - 0.5);
 
 	return IRECT(L, T, R, B);
 }
@@ -74,8 +64,7 @@ void IPlugGUIResize::SetLayoutContainerAt(int viewMode, IControl * pControl, DRE
 
 int IPlugGUIResize::FindLayoutPointerPosition(int viewMode, IControl * pControl)
 {
-	for (int i = 0; i < view[viewMode].layout.size(); i++)
-	{
+	for (int i = 0; i < view[viewMode].layout.size(); i++) {
 		if (pControl == view[viewMode].layout[i].org_pointer) return i;
 	}
 	return -1;
@@ -83,8 +72,7 @@ int IPlugGUIResize::FindLayoutPointerPosition(int viewMode, IControl * pControl)
 
 void IPlugGUIResize::RearrangeLayers()
 {
-	for (int i = 1; i < mGraphics->GetNControls(); i++)
-	{
+	for (int i = 1; i < mGraphics->GetNControls(); i++) {
 		int position = FindLayoutPointerPosition(viewMode, view[current_view_mode].layout[i].moved_pointer);
 		mGraphics->ReplaceControl(position, view[current_view_mode].layout[i].org_pointer);
 	}
@@ -155,10 +143,6 @@ IPlugGUIResize::IPlugGUIResize(IPlugBase* pPlug, IGraphics* pGraphics, bool useH
 		SetDoubleToFile("guiscale", 1.0);
 		gui_scale_ratio = 1.0;
 	}
-	else
-	{
-		gui_scale_ratio = GetDoubleFromFile("guiscale");
-	}
 
 	// Initialize parameters
 	guiResizeParameters.Add(new IParam);
@@ -187,14 +171,12 @@ bool IPlugGUIResize::Draw(IGraphics * pGraphics)
 	return true;
 }
 
-void IPlugGUIResize::DrawBackgroundAtFastResizing(IGraphics * pGraphics, IRECT * pRECT)
-{
+void IPlugGUIResize::DrawBackgroundAtFastResizing(IGraphics * pGraphics, IRECT * pRECT) {
 	IColor backgroundColor = IColor(255, 25, 25, 25);
 	pGraphics->FillIRect(&backgroundColor, pRECT);
 }
 
-void IPlugGUIResize::DrawReopenPluginInterface(IGraphics * pGraphics, IRECT * pRECT)
-{
+void IPlugGUIResize::DrawReopenPluginInterface(IGraphics * pGraphics, IRECT * pRECT) {
 	IColor backgroundColor = IColor(255, 25, 25, 25);
 	pGraphics->FillIRect(&backgroundColor, &mDrawRECT);
 
@@ -224,8 +206,7 @@ void IPlugGUIResize::DrawHandle(IGraphics * pGraphics, IRECT * pRECT)
 	IColor lineColor = IColor(255, 255, 255, 255);
 	double gradient = ((double)lineColor.A / 255.0) / (double)mDrawRECT.W();
 
-	for (int i = 0; i < mDrawRECT.W(); i++)
-	{
+	for (int i = 0; i < mDrawRECT.W(); i++) {
 		double alpha = gradient * (double)(mDrawRECT.W() - i);
 		alpha = alpha * alpha * alpha;
 		alpha = 1 - alpha;
@@ -287,13 +268,9 @@ IPlugGUIResize* IPlugGUIResize::AttachGUIResize()
 	}
 
 	RescaleBitmapsAtLoad();
-
 	InitializeGUIControls(mGraphics);
-
 	mGraphics->SetAllControlsDirty();
-
 	attachedToIPlugBase = true;
-
 	return this;
 }
 
@@ -315,7 +292,6 @@ void IPlugGUIResize::LiveRemoveLayer(IControl * pControl)
 	for (int i = 0; i < GetViewModeSize(); i++)
 	{
 		int position = FindLayoutPointerPosition(i, pControl);
-
 		view[i].layout.erase(view[i].layout.begin() + position);
 	}
 }
@@ -410,8 +386,7 @@ void IPlugGUIResize::SelectViewMode(int viewMode)
 
 void IPlugGUIResize::SetGUIScaleRatio(double guiScaleRatio)
 {
-	gui_scale_ratio = guiScaleRatio;
-	gui_scale_ratio = BOUNDED(gui_scale_ratio, min_gui_scale_ratio, max_gui_scale_ratio);
+	gui_scale_ratio = BOUNDED(guiScaleRatio, min_gui_scale_ratio, max_gui_scale_ratio);
 
 	global_gui_scale_ratio = gui_scale_ratio;
 	plugin_width = (int)(window_width_normalized * gui_scale_ratio);
@@ -436,14 +411,13 @@ void IPlugGUIResize::SetWindowWidth(double width)
 void IPlugGUIResize::SetWindowHeight(double height)
 {
 	window_height_normalized = height;
-
 	window_height_normalized = BOUNDED(window_height_normalized, view[current_view_mode].min_window_height_normalized, view[current_view_mode].max_window_height_normalized);
 }
 
 void IPlugGUIResize::SetGUIScaleLimits(double minSizeInPercentage, double maxSizeInPercentage)
 {
-	min_gui_scale_ratio = minSizeInPercentage / 100.0;
-	max_gui_scale_ratio = maxSizeInPercentage / 100.0;
+	min_gui_scale_ratio = minSizeInPercentage * 0.01;
+	max_gui_scale_ratio = maxSizeInPercentage * 0.01;
 
 	gui_scale_ratio = BOUNDED(gui_scale_ratio, min_gui_scale_ratio, max_gui_scale_ratio);
 }
@@ -543,8 +517,6 @@ void IPlugGUIResize::MoveControlHorizontallyRelativeToWindowSize(IControl* moveC
 
 	// Get control width and height
 	double xRatio = constructorRect.L > 0.0 ? constructorRect.L / constructorWindowRect.W() : 0.0;
-
-
 	double x = relativeTo.W() * xRatio;
 
 	MoveControlHorizontally(moveControl, x, flag);
@@ -568,7 +540,6 @@ void IPlugGUIResize::MoveControlVerticallyRelativeToWindowSize(IControl* moveCon
 
 	// Get control width and height
 	double yRatio = constructorRect.T > 0.0 ? constructorRect.T / constructorWindowRect.H() : 0.0;
-
 	double y = relativeTo.H() * yRatio;
 
 	MoveControlVertically(moveControl, y, flag);
@@ -664,7 +635,6 @@ void IPlugGUIResize::MoveControlRelativeToNonScaledDRECT(IControl* pControl, DRE
 void IPlugGUIResize::MoveControlHorizontallyRelativeToNonScaledDRECT(int index, DRECT relativeTo, double xRatio, resizeFlag flag)
 {
 	IControl* pControl = mGraphics->GetControl(index);
-
 	MoveControlHorizontallyRelativeToNonScaledDRECT(pControl, relativeTo, xRatio, flag);
 }
 
@@ -883,8 +853,6 @@ void IPlugGUIResize::RelativelyMoveControlVertically(IControl* pControl, double 
 	MoveControlVertically(pControl, yRelative, flag);
 }
 // ------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 
 
 void IPlugGUIResize::MoveControlTopEdge(int index, double T, resizeFlag flag)

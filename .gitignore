@@ -64,3 +64,4 @@ WDL/lice/glew/include/GL/WGLEXT.H
 /IPlugExamples/IPlugCustCtrl
 *.aps
 /WDL/IPlug/sbShape.hpp
+/IPlugExamples/IPlugEffectGUIResize/enc_temp_folder/f32dffc0df2abad5c3fe1beac154525a/IPlugGUIResize.cpp
