@@ -85,25 +85,60 @@ Normal View:               Normal View - Scaled 2X:
 
 using namespace std;
 
-struct viewContainer
+struct LayoutItem
 {
-	vector <int> view_mode;
-	vector <int> view_width;
-	vector <int> view_height;
-	vector <double> min_window_width_normalized; 
-	vector <double> min_window_height_normalized;
-	vector <double> max_window_width_normalized;
-	vector <double> max_window_height_normalized;
+	LayoutItem(IControl* pControl) : org_pointer(pControl), moved_pointer(pControl) {}
+	LayoutItem(IControl* pControl, DRECT org_area, int org_is_hidden) 
+		: org_pointer(pControl), moved_pointer(pControl), 
+		org_draw_area(org_area), org_target_area(org_area), org_is_hidden(org_is_hidden)
+	{}
+
+	IControl* org_pointer;
+	IControl* moved_pointer;
+	DRECT org_draw_area;
+	DRECT org_target_area;
+	int org_is_hidden;
 };
 
-struct layoutContainer
+typedef vector<LayoutItem> LayoutContainer;
+
+const double def_min_window_width_normalized = 0.0;
+const double def_min_window_height_normalized = 0.0;
+const double def_max_window_width_normalized = 999999999999.0;
+const double def_max_window_height_normalized = 999999999999.0;
+
+struct ViewItem
 {
-	vector <IControl*> org_pointer;
-	vector <IControl*> moved_pointer;
-	vector <DRECT> org_draw_area;
-	vector <DRECT> org_target_area;
-	vector <int> org_is_hidden;
+	ViewItem(
+		int view_mode,
+		int view_width,
+		int view_height,
+		double min_window_width_normalized = def_min_window_width_normalized,
+		double min_window_height_normalized = def_min_window_height_normalized,
+		double max_window_width_normalized = def_max_window_width_normalized,
+		double max_window_height_normalized = def_max_window_height_normalized
+	) : 
+		view_mode(view_mode),
+		view_width((double)view_width),
+		view_height((double)view_height),
+		min_window_width_normalized(min_window_width_normalized),
+		min_window_height_normalized(min_window_height_normalized),
+		max_window_width_normalized(max_window_width_normalized),
+		max_window_height_normalized(max_window_height_normalized)
+	{}
+
+	int view_mode;
+	double view_width;
+	double view_height;
+	double min_window_width_normalized; 
+	double min_window_height_normalized;
+	double max_window_width_normalized;
+	double max_window_height_normalized;
+	LayoutContainer layout;
 };
+
+typedef vector<ViewItem> ViewContainer;
+
 
 typedef enum _resizeFlag { drawAndTargetArea, drawAreaOnly, targetAreaOnly } resizeFlag;
 typedef enum _resizeOneSide { justHorisontalResizing, justVerticalResizing, horisontalAndVerticalResizing } resizeOneSide;
@@ -111,7 +146,6 @@ typedef enum _resizeOneSide { justHorisontalResizing, justVerticalResizing, hori
 static bool plugin_resized = false;
 static bool bitmaps_rescaled_at_load = false;
 static double global_gui_scale_ratio = 1.0;
-static vector <layoutContainer> global_layout_container;
 
 
 class IPlugGUIResize : public IControl
@@ -120,7 +154,6 @@ public:
 	IPlugGUIResize(IPlugBase *pPlug, IGraphics *pGraphics, bool useHandle = true, int controlSize = 0, int minimumControlSize = 10);
 	~IPlugGUIResize(){}
 
-	
 	// These must be called in your plugin constructor -----------------------------------------------------------------------------------------------------
 	void UsingBitmaps();
 	void DisableFastBitmapResizing();
@@ -229,17 +262,16 @@ public:
 		int index = FindLayoutPointerPosition(current_view_mode, pControl);
 		if (index < 0) return DRECT();
 		
-		return layout_container[current_view_mode].org_draw_area[index];
+		return view[current_view_mode].layout[index].org_draw_area;
 	}
 	DRECT GetOriginalTargetRECTForControl(IControl *pControl)
 	{
 		int index = FindLayoutPointerPosition(current_view_mode, pControl);
 		if (index < 0) return DRECT();
 
-		return layout_container[current_view_mode].org_target_area[index];
+		return view[current_view_mode].layout[index].org_target_area;
 	}
 	// ------------------------------------------------------------------------------------------------------------------------------------------------------
-		
 	
 	// You can override this to use in your custom resizing control -----------------------------------------------------------------------------------------
 	virtual void DrawBackgroundAtFastResizing(IGraphics* pGraphics, IRECT *pRECT);
@@ -247,11 +279,9 @@ public:
 	virtual void DrawHandle(IGraphics* pGraphics, IRECT *pRECT);
 	virtual void DoPopupMenu() {}
 	// ------------------------------------------------------------------------------------------------------------------------------------------------------
-	
 
 	// Call this to resize GUI
 	void ResizeGraphics();
-
 
 	// Used by the framework -----------------------------------------------------------------------------------------------------------------------
 	IParam* GetGUIResizeParameter(int index);
@@ -265,7 +295,6 @@ public:
 	bool IsDirty();
 	// ---------------------------------------------------------------------------------------------------------------------------------------------
 		
-
 private:
 	// Functions that are used internally ----------------------------------------------------------------------------------------------------------
 	bool double_equals(double a, double b, double epsilon = 0.0000000001);
@@ -304,9 +333,10 @@ private:
 
 	int current_view_mode;
 
-	viewContainer view_container;
+	ViewContainer view;
+	LayoutContainer* pGlobalLayout;
 
-	vector <layoutContainer> layout_container;
+//	vector <LayoutContainer> layout;
 	vector <bool> controls_visibility;
 
 	bool use_handle = true;
@@ -357,12 +387,12 @@ private:
 
 // One side handle classes
 // NOTE: Horizontal control position is control size - 2
-class HorisontalResizing : public IControl
+class HorizontalResizing : public IControl
 {
 public:
-	HorisontalResizing(IPlugBase *pPlug, IGraphics *pGraphics, int width);
+	HorizontalResizing(IPlugBase *pPlug, IGraphics *pGraphics, int width);
 
-	~HorisontalResizing() {}
+	~HorizontalResizing() {}
 
 	bool Draw(IGraphics* pGraphics);
 	void OnMouseDown(int x, int y, IMouseMod * pMod);

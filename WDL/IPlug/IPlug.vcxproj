@@ -266,7 +266,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\YCAIRO\ycairo.h" />
-    <ClInclude Include="CairoShapes.h" />
+    <ClInclude Include="DPoint.h" />
     <ClInclude Include="Containers.h" />
     <ClInclude Include="Hosts.h" />
     <ClInclude Include="IBitmapMonoText.h" />
@@ -282,7 +282,7 @@
     <ClInclude Include="IPlugStructs.h" />
     <ClInclude Include="IPopupMenu.h" />
     <ClInclude Include="Log.h" />
-    <ClInclude Include="SimpleCairoControl.h" />
+    <ClInclude Include="CairoKnobs.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

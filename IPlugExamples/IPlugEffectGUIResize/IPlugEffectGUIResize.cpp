@@ -1,7 +1,7 @@
 #include "IPlugEffectGUIResize.h"
 #include "IPlug_include_in_plug_src.h"
 #include "IControl.h"
-#include "CairoShapes.h"
+#include "CairoKnobs.h"
 #include "resource.h"
 
 const int kNumPrograms = 1;
@@ -76,14 +76,14 @@ IPlugEffectGUIResize::IPlugEffectGUIResize(IPlugInstanceInfo instanceInfo)
   IText textProps(24, &textColor, "Arial", IText::kStyleNormal, IText::kAlignCenter, 0, IText::kQualityDefault);
   helloIPlugIndex = pGraphics->AttachControl(new ITextControl(this, IRECT(80, 40, 220, 80), &textProps, "Hello IPlug!"));
 
-//  IBitmap* knob = pGraphics->LoadPointerToBitmap(KNOB_ID, KNOB_FN, kKnobFrames);
-//  knobIndex = pGraphics->AttachControl(new IKnobMultiControl(this, kGainX, kGainY, kGain, knob));
-//  knobIndex = pGraphics->AttachControl(new SimpleCairoControl(this, GetYCAIRO(), IRECT(100, 80, 200, 180), kGain));
+  IBitmap* knob = pGraphics->LoadPointerToBitmap(KNOB_ID, KNOB_FN, kKnobFrames);
+  //knobIndex = pGraphics->AttachControl(new IKnobMultiControl(this, kGainX, kGainY, kGain, knob));
+  pKnob1Idx = pGraphics->AttachControl(new SbKnob0(this, GetYCAIRO(), IRECT(100, 80, 200, 180), kGain));
 
-  pKnob1Idx = pGraphics->AttachControl(new SbKnob0(this, GetYCAIRO(), IRECT(100, 80, 150, 130), kGain));
-  pKnob2Idx = pGraphics->AttachControl(new SbKnob0(this, GetYCAIRO(), IRECT(100, 130, 150, 180), kHumpty));
-  pKnob3Idx = pGraphics->AttachControl(new SbKnob0(this, GetYCAIRO(), IRECT(150, 80, 200, 130), kDumpty));
-  pKnob4Idx = pGraphics->AttachControl(new SbKnob0(this, GetYCAIRO(), IRECT(150, 130, 200, 180), kWhatever));
+  //pKnob1Idx = pGraphics->AttachControl(new SbKnob0(this, GetYCAIRO(), IRECT(100, 80, 150, 130), kGain));
+  //pKnob2Idx = pGraphics->AttachControl(new SbKnob1(this, GetYCAIRO(), IRECT(100, 130, 150, 180), kHumpty));
+  //pKnob3Idx = pGraphics->AttachControl(new SbKnob0(this, GetYCAIRO(), IRECT(150, 80, 200, 130), kDumpty));
+  //pKnob4Idx = pGraphics->AttachControl(new SbKnob1(this, GetYCAIRO(), IRECT(150, 130, 200, 180), kWhatever));
 
   miniViewIndex = pGraphics->AttachControl(new viewSelector(this, IRECT(80, 200, 220, 220), "miniView", miniView));
   defaultViewIndex = pGraphics->AttachControl(new viewSelector(this, IRECT(80, 240, 220, 260), "defaultView", defaultView));

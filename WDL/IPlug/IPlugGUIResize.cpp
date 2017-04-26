@@ -64,35 +64,35 @@ void IPlugGUIResize::GetContainingControls(vector<IControl*> *containingControls
 DRECT * IPlugGUIResize::GetLayoutContainerDrawRECT(int viewMode, IControl * pControl)
 {
 	int position = FindLayoutPointerPosition(viewMode, pControl);
-	return &layout_container[viewMode].org_draw_area[position];
+	return &view[viewMode].layout[position].org_draw_area;
 }
 
 DRECT * IPlugGUIResize::GetLayoutContainerTargetRECT(int viewMode, IControl * pControl)
 {
 	int position = FindLayoutPointerPosition(viewMode, pControl);
-	return &layout_container[viewMode].org_target_area[position];
+	return &view[viewMode].layout[position].org_target_area;
 }
 
 int * IPlugGUIResize::GetLayoutContainerIsHidden(int viewMode, IControl * pControl)
 {
 	int position = FindLayoutPointerPosition(viewMode, pControl);
-	return &layout_container[viewMode].org_is_hidden[position];
+	return &view[viewMode].layout[position].org_is_hidden;
 }
 
 void IPlugGUIResize::SetLayoutContainerAt(int viewMode, IControl * pControl, DRECT drawIn, DRECT targetIn, int isHiddenIn)
 {
 	int position = FindLayoutPointerPosition(viewMode, pControl);
 
-	layout_container[viewMode].org_draw_area[position] = drawIn;
-	layout_container[viewMode].org_target_area[position] = targetIn;
-	layout_container[viewMode].org_is_hidden[position] = isHiddenIn;
+	view[viewMode].layout[position].org_draw_area = drawIn;
+	view[viewMode].layout[position].org_target_area = targetIn;
+	view[viewMode].layout[position].org_is_hidden = isHiddenIn;
 }
 
 int IPlugGUIResize::FindLayoutPointerPosition(int viewMode, IControl * pControl)
 {
-	for (int i = 0; i < layout_container[0].org_pointer.size(); i++)
+	for (int i = 0; i < view[viewMode].layout.size(); i++)
 	{
-		if (pControl == layout_container[viewMode].org_pointer[i]) return i;
+		if (pControl == view[viewMode].layout[i].org_pointer) return i;
 	}
 	return -1;
 }
@@ -101,19 +101,18 @@ void IPlugGUIResize::RearrangeLayers()
 {
 	for (int i = 1; i < mGraphics->GetNControls(); i++)
 	{
-		int position = FindLayoutPointerPosition(viewMode, layout_container[current_view_mode].moved_pointer[i]);
-
-		mGraphics->ReplaceControl(position, layout_container[current_view_mode].org_pointer[i]);
+		int position = FindLayoutPointerPosition(viewMode, view[current_view_mode].layout[i].moved_pointer);
+		mGraphics->ReplaceControl(position, view[current_view_mode].layout[i].org_pointer);
 	}
 }
 // --------------------------------------------------------------------------------------------------------------------
 
 // IPlugGUIResize -----------------------------------------------------------------------------------------------------
 IPlugGUIResize::IPlugGUIResize(IPlugBase* pPlug, IGraphics* pGraphics, bool useHandle, int controlSize, int minimumControlSize)
-	: IControl(pPlug, IRECT(0, 0, 0, 0))
+	: IControl(pPlug, IRECT(0, 0, 0, 0)), pGlobalLayout(nullptr)
 {
 	mGraphics = pGraphics;
-	layout_container.resize(1);
+//	layout.resize(1);
 	use_handle = useHandle;
 
 	default_gui_width = pGraphics->Width();
@@ -122,13 +121,13 @@ IPlugGUIResize::IPlugGUIResize(IPlugBase* pPlug, IGraphics* pGraphics, bool useH
 	window_height_normalized = (double)default_gui_height;
 
 	// Set default view dimensions
-	view_container.view_mode.push_back(0);
-	view_container.view_width.push_back(default_gui_width);
-	view_container.view_height.push_back(default_gui_height);
-	view_container.min_window_width_normalized.push_back(0.0);
-	view_container.min_window_height_normalized.push_back(0.0);
-	view_container.max_window_width_normalized.push_back(999999999999.0);
-	view_container.max_window_height_normalized.push_back(999999999999.0);
+	
+	view.push_back(ViewItem(
+		0,
+		default_gui_width,
+		default_gui_height
+	));
+
 
 	current_view_mode = 0;
 
@@ -255,7 +254,7 @@ IPlugGUIResize* IPlugGUIResize::AttachGUIResize()
 {
 	// Check if we need to attach horizontal and vertical handles
 	int* verticalControl = mGraphics->AttachControl(new VerticalResizing(mPlug, mGraphics, one_side_handle_size));
-	int* horisontalControl = mGraphics->AttachControl(new HorisontalResizing(mPlug, mGraphics, one_side_handle_size));
+	int* horizontalControl = mGraphics->AttachControl(new HorizontalResizing(mPlug, mGraphics, one_side_handle_size));
 
 	if (using_one_size_resize)
 	{
@@ -266,59 +265,41 @@ IPlugGUIResize* IPlugGUIResize::AttachGUIResize()
 		}
 		else if (one_side_flag == justVerticalResizing)
 		{
-			HideControl(*horisontalControl);
+			HideControl(*horizontalControl);
 		}
 	}
 	else
 	{
 		HideControl(*verticalControl);
-		HideControl(*horisontalControl);
+		HideControl(*horizontalControl);
 	}
 
 	// Add control sizes to a global container. This is to fix the problem of bitmap resizing on load
-	if (global_layout_container.size() == 0)
+	if (pGlobalLayout == nullptr)
 	{
-		global_layout_container.resize(1);
+		pGlobalLayout = new LayoutContainer;
 
 		// Backup original controls sizes
+		
 		for (int i = 0; i < mGraphics->GetNControls(); i++)
 		{
 			IControl* pControl = mGraphics->GetControl(i);
-
-			global_layout_container[0].org_pointer.push_back(pControl);
-			global_layout_container[0].moved_pointer.push_back(pControl);
-			global_layout_container[0].org_draw_area.push_back(IRECT_to_DRECT(&*pControl->GetDrawRECT()));
-			global_layout_container[0].org_target_area.push_back(IRECT_to_DRECT(&*pControl->GetTargetRECT()));
-			global_layout_container[0].org_is_hidden.push_back((int)pControl->IsHidden());
+			pGlobalLayout->push_back(LayoutItem(
+				pControl,						// Push pointers to layout control so that we can search by pointer
+				IRECT_to_DRECT(&*pControl->GetDrawRECT()), 
+				(int)pControl->IsHidden()));
 		}
 
-		// Add IPlugGUIResize control size
-		global_layout_container[0].org_pointer.push_back(this);
-		global_layout_container[0].moved_pointer.push_back(this);
-		global_layout_container[0].org_draw_area.push_back(IRECT_to_DRECT(&gui_resize_area));
-		global_layout_container[0].org_target_area.push_back(IRECT_to_DRECT(&gui_resize_area));
-		global_layout_container[0].org_is_hidden.push_back(0);
+		// Add IPlugGUIResize control
+		pGlobalLayout->push_back(LayoutItem(
+			this,
+			IRECT_to_DRECT(&gui_resize_area),
+			0));
 	}
-
-	// Push pointers to layout control so that we can search by pointer
-	for (int i = 0; i < mGraphics->GetNControls(); i++)
-	{
-		layout_container[0].org_pointer.push_back(mGraphics->GetControl(i));
-		layout_container[0].moved_pointer.push_back(mGraphics->GetControl(i));
-	}
-	// Add IPlugGUIResize control
-	layout_container[0].org_pointer.push_back(this);
-	layout_container[0].moved_pointer.push_back(this);
-
-	// Adding global layout container to a local one
-	layout_container[0].org_draw_area = global_layout_container[0].org_draw_area;
-	layout_container[0].org_target_area = global_layout_container[0].org_target_area;
-	layout_container[0].org_is_hidden = global_layout_container[0].org_is_hidden;
 
 	// Adding new layout for this view. By default it is copying default view layout
-	for (int i = 0; i < view_container.view_mode.size(); i++)
-	{
-		layout_container.push_back(layout_container[0]);
+	for (int i = 0; i < view.size(); i++){
+		view[i].layout = *pGlobalLayout;
 	}
 
 	RescaleBitmapsAtLoad();
@@ -338,10 +319,10 @@ void IPlugGUIResize::LiveEditSetLayout(int viewMode, int moveToIndex, int moveFr
 	drawDRECT = IRECT_to_DRECT(&drawRECT);
 	targetDRECT = IRECT_to_DRECT(&targetRECT);
 
-	layout_container[viewMode].moved_pointer[moveToIndex] = layout_container[viewMode].org_pointer[moveFromIndex];
-	layout_container[viewMode].org_draw_area[moveToIndex] = drawDRECT;
-	layout_container[viewMode].org_target_area[moveToIndex] = targetDRECT;
-	layout_container[viewMode].org_is_hidden[moveToIndex] = isHidden;
+	view[viewMode].layout[moveToIndex].moved_pointer = view[viewMode].layout[moveFromIndex].org_pointer;
+	view[viewMode].layout[moveToIndex].org_draw_area = drawDRECT;
+	view[viewMode].layout[moveToIndex].org_target_area = targetDRECT;
+	view[viewMode].layout[moveToIndex].org_is_hidden = isHidden;
 }
 
 void IPlugGUIResize::LiveRemoveLayer(IControl * pControl)
@@ -351,11 +332,7 @@ void IPlugGUIResize::LiveRemoveLayer(IControl * pControl)
 	{
 		int position = FindLayoutPointerPosition(i, pControl);
 
-		layout_container[i].moved_pointer.erase(layout_container[i].moved_pointer.begin() + position);
-		layout_container[i].org_pointer.erase(layout_container[i].org_pointer.begin() + position);
-		layout_container[i].org_draw_area.erase(layout_container[i].org_draw_area.begin() + position);
-		layout_container[i].org_target_area.erase(layout_container[i].org_target_area.begin() + position);
-		layout_container[i].org_is_hidden.erase(layout_container[i].org_is_hidden.begin() + position);
+		view[i].layout.erase(view[i].layout.begin() + position);
 	}
 }
 
@@ -371,13 +348,7 @@ void IPlugGUIResize::UseControlAndClickOnHandleForGUIScaling(bool statement)
 
 void IPlugGUIResize::AddNewView(int viewMode, int viewWidth, int viewHeight)
 {
-	view_container.view_mode.push_back(viewMode);
-	view_container.view_width.push_back(viewWidth);
-	view_container.view_height.push_back(viewHeight);
-	view_container.min_window_width_normalized.push_back(0.0);
-	view_container.min_window_height_normalized.push_back(0.0);
-	view_container.max_window_width_normalized.push_back(999999999999.0);
-	view_container.max_window_height_normalized.push_back(999999999999.0);
+	view.push_back(ViewItem(viewMode,viewWidth,viewHeight));
 }
 
 void IPlugGUIResize::UseOneSideResizing(int handleSize, int minHandleSize, resizeOneSide flag)
@@ -394,17 +365,17 @@ void IPlugGUIResize::EnableOneSideResizing(resizeOneSide flag)
 	if (using_one_size_resize)
 	{
 		int index = mGraphics->GetNControls() - 1;
-		int horisontalControl = (index - 1);
+		int horizontalControl = (index - 1);
 		int verticalControl = (index - 2);
 
 		if (flag == horisontalAndVerticalResizing)
 		{
-			ShowControl(horisontalControl);
+			ShowControl(horizontalControl);
 			ShowControl(verticalControl);
 		}
 		else if (flag == justHorisontalResizing)
 		{
-			ShowControl(horisontalControl);;
+			ShowControl(horizontalControl);;
 		}
 		else if (flag == justVerticalResizing)
 		{
@@ -418,17 +389,17 @@ void IPlugGUIResize::DisableOneSideResizing(resizeOneSide flag)
 	if (using_one_size_resize)
 	{
 		int index = mGraphics->GetNControls() - 1;
-		int horisontalControl = (index - 1);
+		int horizontalControl = (index - 1);
 		int verticalControl = (index - 2);
 
 		if (flag == horisontalAndVerticalResizing)
 		{
-			HideControl(horisontalControl);
+			HideControl(horizontalControl);
 			HideControl(verticalControl);
 		}
 		else if (flag == justHorisontalResizing)
 		{
-			HideControl(horisontalControl);
+			HideControl(horizontalControl);
 		}
 		else if (flag == justVerticalResizing)
 		{
@@ -439,20 +410,18 @@ void IPlugGUIResize::DisableOneSideResizing(resizeOneSide flag)
 
 void IPlugGUIResize::SelectViewMode(int viewMode)
 {
-	int position = 0;
+	int pos = 0;
 
-	for (int i = 0; i < view_container.view_mode.size(); i++)
-	{
-		if (view_container.view_mode[i] == viewMode)
-		{
-			position = i;
+	for (int i = 0; i < view.size(); i++)	{
+		if (view[i].view_mode == viewMode)		{
+			pos = i;
 			break;
 		}
 	}
 
-	current_view_mode = position;
-	window_width_normalized = (double)view_container.view_width[position];
-	window_height_normalized = (double)view_container.view_height[position];
+	current_view_mode = pos;
+	window_width_normalized = view[pos].view_width;
+	window_height_normalized = view[pos].view_height;
 }
 
 void IPlugGUIResize::SetGUIScaleRatio(double guiScaleRatio)
@@ -470,22 +439,21 @@ void IPlugGUIResize::SetWindowSize(double width, double height)
 	window_width_normalized = width;
 	window_height_normalized = height;
 
-	window_width_normalized = BOUNDED(window_width_normalized, view_container.min_window_width_normalized[current_view_mode], view_container.max_window_width_normalized[current_view_mode]);
-	window_height_normalized = BOUNDED(window_height_normalized, view_container.min_window_height_normalized[current_view_mode], view_container.max_window_height_normalized[current_view_mode]);
+	window_width_normalized = BOUNDED(window_width_normalized, view[current_view_mode].min_window_width_normalized, view[current_view_mode].max_window_width_normalized);
+	window_height_normalized = BOUNDED(window_height_normalized, view[current_view_mode].min_window_height_normalized, view[current_view_mode].max_window_height_normalized);
 }
 
 void IPlugGUIResize::SetWindowWidth(double width)
 {
 	window_width_normalized = width;
-
-	window_width_normalized = BOUNDED(window_width_normalized, view_container.min_window_width_normalized[current_view_mode], view_container.max_window_width_normalized[current_view_mode]);
+	window_width_normalized = BOUNDED(window_width_normalized, view[current_view_mode].min_window_width_normalized, view[current_view_mode].max_window_width_normalized);
 }
 
 void IPlugGUIResize::SetWindowHeight(double height)
 {
 	window_height_normalized = height;
 
-	window_height_normalized = BOUNDED(window_height_normalized, view_container.min_window_height_normalized[current_view_mode], view_container.max_window_height_normalized[current_view_mode]);
+	window_height_normalized = BOUNDED(window_height_normalized, view[current_view_mode].min_window_height_normalized, view[current_view_mode].max_window_height_normalized);
 }
 
 void IPlugGUIResize::SetGUIScaleLimits(double minSizeInPercentage, double maxSizeInPercentage)
@@ -498,14 +466,14 @@ void IPlugGUIResize::SetGUIScaleLimits(double minSizeInPercentage, double maxSiz
 
 void IPlugGUIResize::SetWindowSizeLimits(int viewMode, double minWindowWidth, double minWindowHeight, double maxWindowWidth, double maxWindowHeight)
 {
-	view_container.min_window_width_normalized[viewMode] = minWindowWidth;
-	view_container.max_window_width_normalized[viewMode] = maxWindowWidth;
+	view[viewMode].min_window_width_normalized = minWindowWidth;
+	view[viewMode].max_window_width_normalized = maxWindowWidth;
 
-	view_container.min_window_height_normalized[viewMode] = minWindowHeight;
-	view_container.max_window_height_normalized[viewMode] = maxWindowHeight;
+	view[viewMode].min_window_height_normalized = minWindowHeight;
+	view[viewMode].max_window_height_normalized = maxWindowHeight;
 
-	window_width_normalized = BOUNDED(window_width_normalized, view_container.min_window_width_normalized[current_view_mode], view_container.max_window_width_normalized[current_view_mode]);
-	window_height_normalized = BOUNDED(window_height_normalized, view_container.min_window_height_normalized[current_view_mode], view_container.max_window_height_normalized[current_view_mode]);
+	window_width_normalized = BOUNDED(window_width_normalized, view[current_view_mode].min_window_width_normalized, view[current_view_mode].max_window_width_normalized);
+	window_height_normalized = BOUNDED(window_height_normalized, view[current_view_mode].min_window_height_normalized, view[current_view_mode].max_window_height_normalized);
 }
 
 void  IPlugGUIResize::UsingBitmaps()
@@ -528,7 +496,7 @@ void IPlugGUIResize::HideControl(int index)
 void IPlugGUIResize::HideControl(IControl * pControl)
 {
 	int position = FindLayoutPointerPosition(current_view_mode, pControl);
-	if (position >= 0) layout_container[current_view_mode].org_is_hidden[position] = true;
+	if (position >= 0) view[current_view_mode].layout[position].org_is_hidden = true;
 
 	pControl->Hide(true);
 }
@@ -543,7 +511,7 @@ void IPlugGUIResize::ShowControl(int index)
 void IPlugGUIResize::ShowControl(IControl * pControl)
 {
 	int position = FindLayoutPointerPosition(current_view_mode, pControl);
-	if (position >= 0) layout_container[current_view_mode].org_is_hidden[position] = false;
+	if (position >= 0) view[current_view_mode].layout[position].org_is_hidden = false;
 
 	pControl->Hide(false);
 }
@@ -561,8 +529,8 @@ void IPlugGUIResize::MoveControlRelativeToWindowSize(IControl* moveControl, resi
 	IRECT relativeTo = *mGraphics->GetControl(0)->GetNonScaledDrawRECT();
 
 	// Get constructor rectangle
-	DRECT constructorRect = global_layout_container[0].org_draw_area[*moveControl->GetLayerPosition()];
-	DRECT constructorWindowRect = global_layout_container[0].org_draw_area[0];
+	DRECT constructorRect = (*pGlobalLayout)[*moveControl->GetLayerPosition()].org_draw_area;
+	DRECT constructorWindowRect = (*pGlobalLayout)[0].org_draw_area;
 
 	// Get control width and height
 	double xRatio = constructorRect.L > 0.0 ? constructorRect.L / constructorWindowRect.W() : 0.0;
@@ -586,8 +554,8 @@ void IPlugGUIResize::MoveControlHorizontallyRelativeToWindowSize(IControl* moveC
 	IRECT relativeTo = *mGraphics->GetControl(0)->GetNonScaledDrawRECT();
 
 	// Get constructor rectangle
-	DRECT constructorRect = global_layout_container[0].org_draw_area[*moveControl->GetLayerPosition()];
-	DRECT constructorWindowRect = global_layout_container[0].org_draw_area[0];
+	DRECT constructorRect = (*pGlobalLayout)[*moveControl->GetLayerPosition()].org_draw_area;
+	DRECT constructorWindowRect = (*pGlobalLayout)[0].org_draw_area;
 
 	// Get control width and height
 	double xRatio = constructorRect.L > 0.0 ? constructorRect.L / constructorWindowRect.W() : 0.0;
@@ -610,8 +578,9 @@ void IPlugGUIResize::MoveControlVerticallyRelativeToWindowSize(IControl* moveCon
 	IRECT relativeTo = *mGraphics->GetControl(0)->GetNonScaledDrawRECT();
 
 	// Get constructor rectangle
-	DRECT constructorRect = global_layout_container[0].org_draw_area[*moveControl->GetLayerPosition()];
-	DRECT constructorWindowRect = global_layout_container[0].org_draw_area[0];
+	//Todo refactor copy pasted code
+	DRECT constructorRect = (*pGlobalLayout)[*moveControl->GetLayerPosition()].org_draw_area;
+	DRECT constructorWindowRect = (*pGlobalLayout)[0].org_draw_area;
 
 	// Get control width and height
 	double yRatio = constructorRect.T > 0.0 ? constructorRect.T / constructorWindowRect.H() : 0.0;
@@ -1131,7 +1100,7 @@ void IPlugGUIResize::ResizeControlRelativeToWindowSize(IControl* pControl, resiz
 {
 	if (flag == drawAndTargetArea || flag == drawAreaOnly)
 	{
-		DRECT constructorDrawRect = global_layout_container[0].org_draw_area[*pControl->GetLayerPosition()];
+		DRECT constructorDrawRect = (*pGlobalLayout)[*pControl->GetLayerPosition()].org_draw_area;
 
 		DRECT nonScaledDrawRect = RescaleToDRECT(&constructorDrawRect, GetWidnowSizeWidthRatio(), GetWidnowSizeHeightRatio());
 		IRECT drawRect = RescaleToIRECT(&nonScaledDrawRect, gui_scale_ratio, gui_scale_ratio);
@@ -1142,7 +1111,7 @@ void IPlugGUIResize::ResizeControlRelativeToWindowSize(IControl* pControl, resiz
 
 	if (flag == drawAndTargetArea || flag == targetAreaOnly)
 	{
-		DRECT constructorTargetRect = global_layout_container[0].org_draw_area[*pControl->GetLayerPosition()];
+		DRECT constructorTargetRect = (*pGlobalLayout)[*pControl->GetLayerPosition()].org_draw_area;
 
 		DRECT nonScaledTargetRect = RescaleToDRECT(&constructorTargetRect, GetWidnowSizeWidthRatio(), GetWidnowSizeHeightRatio());
 		IRECT targetRect = RescaleToIRECT(&nonScaledTargetRect, gui_scale_ratio, gui_scale_ratio);
@@ -1161,7 +1130,7 @@ void IPlugGUIResize::ResizeControlHorizontalyRelativeToWindowSize(IControl* pCon
 {
 	if (flag == drawAndTargetArea || flag == drawAreaOnly)
 	{
-		DRECT constructorDrawRect = global_layout_container[0].org_draw_area[*pControl->GetLayerPosition()];
+		DRECT constructorDrawRect = (*pGlobalLayout)[*pControl->GetLayerPosition()].org_draw_area;
 
 		DRECT nonScaledDrawRect = RescaleToDRECT(&constructorDrawRect, GetWidnowSizeWidthRatio(), 1.0);
 		IRECT drawRect = RescaleToIRECT(&nonScaledDrawRect, gui_scale_ratio, gui_scale_ratio);
@@ -1172,7 +1141,7 @@ void IPlugGUIResize::ResizeControlHorizontalyRelativeToWindowSize(IControl* pCon
 
 	if (flag == drawAndTargetArea || flag == targetAreaOnly)
 	{
-		DRECT constructorTargetRect = global_layout_container[0].org_draw_area[*pControl->GetLayerPosition()];
+		DRECT constructorTargetRect = (*pGlobalLayout)[*pControl->GetLayerPosition()].org_draw_area;
 
 		DRECT nonScaledTargetRect = RescaleToDRECT(&constructorTargetRect, GetWidnowSizeWidthRatio(), 1.0);
 		IRECT targetRect = RescaleToIRECT(&nonScaledTargetRect, gui_scale_ratio, gui_scale_ratio);
@@ -1191,7 +1160,7 @@ void IPlugGUIResize::ResizeControlVerticallyRelativeToWindowSize(IControl* pCont
 {
 	if (flag == drawAndTargetArea || flag == drawAreaOnly)
 	{
-		DRECT constructorDrawRect = global_layout_container[0].org_draw_area[*pControl->GetLayerPosition()];
+		DRECT constructorDrawRect = (*pGlobalLayout)[*pControl->GetLayerPosition()].org_draw_area;
 
 		DRECT nonScaledDrawRect = RescaleToDRECT(&constructorDrawRect, 1.0, GetWidnowSizeHeightRatio());
 		IRECT drawRect = RescaleToIRECT(&nonScaledDrawRect, gui_scale_ratio, gui_scale_ratio);
@@ -1202,7 +1171,7 @@ void IPlugGUIResize::ResizeControlVerticallyRelativeToWindowSize(IControl* pCont
 
 	if (flag == drawAndTargetArea || flag == targetAreaOnly)
 	{
-		DRECT constructorTargetRect = global_layout_container[0].org_draw_area[*pControl->GetLayerPosition()];
+		DRECT constructorTargetRect = (*pGlobalLayout)[*pControl->GetLayerPosition()].org_draw_area;
 
 		DRECT nonScaledTargetRect = RescaleToDRECT(&constructorTargetRect, 1.0, GetWidnowSizeHeightRatio());
 		IRECT targetRect = RescaleToIRECT(&nonScaledTargetRect, gui_scale_ratio, gui_scale_ratio);
@@ -1271,7 +1240,7 @@ int IPlugGUIResize::GetViewMode()
 
 int IPlugGUIResize::GetViewModeSize()
 {
-	return view_container.view_mode.size();
+	return view.size();
 }
 
 bool IPlugGUIResize::CurrentlyFastResizing()
@@ -1314,18 +1283,18 @@ void IPlugGUIResize::ResizeControlRects()
 
 	// Keeps one side handle above or at minimum size
 	int index = mGraphics->GetNControls() - 1;
-	IControl* horisontalControl = mGraphics->GetControl(index - 1);
+	IControl* horizontalControl = mGraphics->GetControl(index - 1);
 	IControl* verticalControl = mGraphics->GetControl(index - 2);
 
 	// Take care of one side handles
 	// We will treat draw and target rect the same
 	if (using_one_size_resize)
 	{
-		if (horisontalControl->GetTargetRECT()->W() < one_side_handle_min_size)
+		if (horizontalControl->GetTargetRECT()->W() < one_side_handle_min_size)
 		{
-			IRECT rect = IRECT(horisontalControl->GetTargetRECT()->R - one_side_handle_min_size, 0, horisontalControl->GetTargetRECT()->R, horisontalControl->GetTargetRECT()->B);
-			horisontalControl->SetDrawRECT(rect);
-			horisontalControl->SetTargetRECT(rect);
+			IRECT rect = IRECT(horizontalControl->GetTargetRECT()->R - one_side_handle_min_size, 0, horizontalControl->GetTargetRECT()->R, horizontalControl->GetTargetRECT()->B);
+			horizontalControl->SetDrawRECT(rect);
+			horizontalControl->SetTargetRECT(rect);
 		}
 
 		if (verticalControl->GetTargetRECT()->H() < one_side_handle_min_size)
@@ -1365,7 +1334,7 @@ void IPlugGUIResize::ResetControlsVisibility()
 	for (int i = 0; i < mGraphics->GetNControls(); i++)
 	{
 		IControl* pControl = mGraphics->GetControl(i);
-		pControl->Hide(layout_container[current_view_mode].org_is_hidden[i]);
+		pControl->Hide(view[current_view_mode].layout[i].org_is_hidden);
 	}
 }
 
@@ -1388,7 +1357,7 @@ void IPlugGUIResize::ResizeAtGUIOpen()
 	if (!presets_loaded)
 	{
 		if (guiResizeParameters.Get(0)->Value() > -0.5)
-			current_view_mode = IPMIN((size_t)guiResizeParameters.Get(0)->Value(), view_container.view_mode.size());
+			current_view_mode = IPMIN((size_t)guiResizeParameters.Get(0)->Value(), view.size());
 
 		if (guiResizeParameters.Get(1)->Value() > -0.5)
 			window_width_normalized = guiResizeParameters.Get(1)->Value();
@@ -1555,8 +1524,8 @@ void IPlugGUIResize::OnMouseDrag(int x, int y, int dX, int dY, IMouseMod * pMod)
 			window_width_normalized = (double)x / gui_scale_ratio;
 			window_height_normalized = (double)y / gui_scale_ratio;
 
-			window_width_normalized = BOUNDED(window_width_normalized, view_container.min_window_width_normalized[current_view_mode], view_container.max_window_width_normalized[current_view_mode]);
-			window_height_normalized = BOUNDED(window_height_normalized, view_container.min_window_height_normalized[current_view_mode], view_container.max_window_height_normalized[current_view_mode]);
+			window_width_normalized = BOUNDED(window_width_normalized, view[current_view_mode].min_window_width_normalized, view[current_view_mode].max_window_width_normalized);
+			window_height_normalized = BOUNDED(window_height_normalized, view[current_view_mode].min_window_height_normalized, view[current_view_mode].max_window_height_normalized);
 		}
 
 
@@ -1681,25 +1650,25 @@ bool IPlugGUIResize::IsDirty()
 
 
 // Horizontal handle ------------------------------------------------------------------------------------
-HorisontalResizing::HorisontalResizing(IPlugBase *pPlug, IGraphics *pGraphics, int width)
+HorizontalResizing::HorizontalResizing(IPlugBase *pPlug, IGraphics *pGraphics, int width)
 	: IControl(pPlug, IRECT(pGraphics->Width() - width, 0, pGraphics->Width(), pGraphics->Height()))
 {
 	mGraphics = pGraphics;
 	mGraphics->HandleMouseOver(true);
 }
 
-bool HorisontalResizing::Draw(IGraphics * pGraphics)
+bool HorizontalResizing::Draw(IGraphics * pGraphics)
 {
 	//pGraphics->FillIRect(&COLOR_RED, &mDrawRECT);
 	return true;
 }
 
-void HorisontalResizing::OnMouseDown(int x, int y, IMouseMod * pMod)
+void HorizontalResizing::OnMouseDown(int x, int y, IMouseMod * pMod)
 {
 	SetCursor(LoadCursor(NULL, IDC_SIZEWE));
 }
 
-void HorisontalResizing::OnMouseDrag(int x, int y, int dX, int dY, IMouseMod * pMod)
+void HorizontalResizing::OnMouseDrag(int x, int y, int dX, int dY, IMouseMod * pMod)
 {
 	SetCursor(LoadCursor(NULL, IDC_SIZEWE));
 
@@ -1710,12 +1679,12 @@ void HorisontalResizing::OnMouseDrag(int x, int y, int dX, int dY, IMouseMod * p
 	GetGUIResize()->ResizeGraphics();
 }
 
-void HorisontalResizing::OnMouseOver(int x, int y, IMouseMod * pMod)
+void HorizontalResizing::OnMouseOver(int x, int y, IMouseMod * pMod)
 {
 	SetCursor(LoadCursor(NULL, IDC_SIZEWE));
 }
 
-void HorisontalResizing::OnMouseOut()
+void HorizontalResizing::OnMouseOut()
 {
 	SetCursor(LoadCursor(NULL, IDC_ARROW));
 }

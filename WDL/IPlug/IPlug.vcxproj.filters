@@ -33,8 +33,8 @@
     <ClInclude Include="..\..\YCAIRO\ycairo.h" />
     <ClInclude Include="IPlugGUILiveEdit.h" />
     <ClInclude Include="IControlGroup.h" />
-    <ClInclude Include="SimpleCairoControl.h" />
-    <ClInclude Include="CairoShapes.h" />
+    <ClInclude Include="DPoint.h" />
+    <ClInclude Include="CairoKnobs.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

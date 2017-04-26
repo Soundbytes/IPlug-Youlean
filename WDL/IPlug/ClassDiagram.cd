@@ -38,7 +38,7 @@
   <Class Name="ycairo_gui" Collapsed="true">
     <Position X="3" Y="17" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAQACAQgAgACEAAAAIQAggAgAAIAgASAABAAYAAAAAA=</HashCode>
+      <HashCode>IAQACAQgAgACEAAAAIQAggAgAAKAgASAABAAYAAAAAA=</HashCode>
       <FileName>C:\Daten\Referenzprojekt\Repo\IPlug-Youlean\YCAIRO\ycairo.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -306,17 +306,10 @@
       <FileName>IPlugStructs.h</FileName>
     </TypeIdentifier>
   </Struct>
-  <Struct Name="viewContainer" Collapsed="true">
+  <Struct Name="viewItem" Collapsed="true">
     <Position X="4.75" Y="20.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAgAAAAAAAAAAAAAAACAAAABAIAEAAEAAAAA=</HashCode>
-      <FileName>IPlugGUIResize.h</FileName>
-    </TypeIdentifier>
-  </Struct>
-  <Struct Name="layoutContainer" Collapsed="true">
-    <Position X="6.5" Y="19.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAMAAAAAAAAAAAAABAABAAAAAAAAAAAQ=</HashCode>
       <FileName>IPlugGUIResize.h</FileName>
     </TypeIdentifier>
   </Struct>
@@ -395,6 +388,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAEAAA=</HashCode>
       <FileName>Log.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="layoutContainer" Collapsed="true">
+    <Position X="6.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAMAAAAAAAAAAAAABAABAAAAAAAAAAAQ=</HashCode>
+      <FileName>IPlugGUIResize.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Typedef Name="VstInt32" Collapsed="true">

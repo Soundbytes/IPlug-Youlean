@@ -63,3 +63,4 @@ WDL/lice/glew/include/GL/WGLEXT.H
 *.ilk
 /IPlugExamples/IPlugCustCtrl
 *.aps
+/WDL/IPlug/sbShape.hpp
