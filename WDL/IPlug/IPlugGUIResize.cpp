@@ -1538,7 +1538,7 @@ void IPlugGUIResize::OnMouseDown(int x, int y, IMouseMod * pMod)
 
 void IPlugGUIResize::OnMouseDblClick(int x, int y, IMouseMod* pMod)
 {
-	gui_scale_ratio = 1.0;
+	gui_scale_ratio = global_gui_scale_ratio = 1.0;
 	ResizeGraphics();
 }
 
